@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: sans-serif;
+    color: #333;
+}
+
+.flex {
+    display: flex;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    height: 20%;
+    background-color: blue;
+    flex-direction: column;
+    color: floralwhite;
+    border: 1px solid rgb(15, 86, 156);
+    box-shadow: 10px 8px 10px blue;
+}
+
+main {
+    height: 60%;
+    flex-direction: column;
+    color: #333;
+    flex-wrap: wrap;
+}
+
+#restricted {
+    font-size: 28px;
+    margin: 0;
+    margin-right: 320px;
+}
+
+#credentials {
+    margin: 0;
+    margin-right: 320px;
+    font-size: 18.4px;
+}
+
+form {
+    flex-direction: column;
+    font-size: 20px;
+    width: 30%;
+    margin-top: -40px;
+    font-weight: bold;
+}
+
+#loginFailed {
+    color: rgba(255, 0, 0, 0.8); 
+    font-weight: bold; 
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+form p {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+form input {
+    width: 90%;
+    height: 30px;
+    outline: none;
+    margin-top: 5px;
+}
+
+form label {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.error {
+    color: rgba(255, 0, 0, 0.8);
+    padding-right: 30px;
+    font-size: 10px;
+    visibility: hidden;
+}
+
+button {
+    padding: 10px 6px;
+    background-color: indianred;
+    color:white;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    margin: 0 auto 30px auto;
+    cursor: pointer;
+    width: 130px;
+}
+button:disabled {
+    cursor: not-allowed;
+}
+#submit {
+    background-color: rgb(202, 14, 14);
+    color: white;
+    outline: none;
+    border: none;
+    margin: 0 auto 30px auto;
+    cursor: pointer;
+    width: 130px;
+}
+#submit:hover {
+    background-image: linear-gradient(120deg, rgba(246, 39, 25, 0.87), rgb(192, 4, 4));
+    font-weight: bold;
+}
+#submit:focus {
+    border: 2px solid black;
+}
+
+#profile {
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#card {
+    margin-top: 10%;
+    width: 90%;
+}
+
+figure {
+    height: 100%;
+    margin: 0;
+}
+
+img {
+    margin: 0;
+    height: 100%;
+}
+
+#content {
+    height: 90%;
+    width: 80vw;
+    padding: 40px;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+#name {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+#fullname {
+    font-size: 20px;
+    margin-right: 10px;
+    font-weight: 700;
+}
+
+#logout {
+    /* width: 6%; */
+    padding: 12px 6px;
+}
+
+#logout a {
+    text-decoration: none;
+    color: #333;
+}
+
+footer {
+
+    height: 10%;
+}
+
+footer p {
+    color: #333;
+}
+
+#alert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
+    color: red;
+    font-size: 32px;
+    font-family: "Plasma Drip", Arial, sans-serif;
+}
