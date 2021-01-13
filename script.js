@@ -1,3 +1,4 @@
+
 const main = document.querySelector('main');
 const form = document.querySelector('form');
 const emailInput = document.querySelector('#email');
@@ -20,8 +21,11 @@ function inputsCheck(){
     }
     else{
         submitButton.disabled = true;
+
     }
 }
+
+
 
 function emailCheck(){
     let invalidEmail = document.querySelector('#mailError');
@@ -57,4 +61,5 @@ passwordInput.addEventListener('change', (e) =>{
 
     inputsCheck();
     passwordCheck();
+
 })

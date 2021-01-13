@@ -6,6 +6,7 @@
     }
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,10 +15,12 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
 </head>
 <body>
    
     <main class="maincontainer">
+
 
     <?php
     if($_SESSION['logged'] == true){
@@ -60,9 +63,17 @@
 ?>
 
     </main>
-    <footer class="footer">
-    </footer>
+    <footer>
+    <div class="content has-text-centered">
+      <p class="footertext">
+        <strong>Fair use disclaimer</strong> this website is for educational purposes only.
+      </p>
+    </div>
+  </footer>
     <script src="script.js"></script>
+
+    
+
 </body>
 </html>
 
