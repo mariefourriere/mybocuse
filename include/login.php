@@ -1,6 +1,6 @@
 <div id="titlebox">
 <figure class="mage is-16by9">
-  <img src="/asset/images/titre.png"">
+  <img src="./asset/images/titre.png">
 </figure>
 </div>
 <?php if ($bool) {
@@ -12,7 +12,7 @@
  <div class="flex">
 <div id="imagebox">
 <figure class="image is-1by1">
-  <img src="chef.png">
+  <img src="./asset/images/chef.png">
 </figure>
 </div>
 <form method="post" action="" class="flex">
