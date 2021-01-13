@@ -1,6 +1,6 @@
 <div id="titlebox">
 <figure class="mage is-16by9">
-  <img src="titre.png">
+  <img src="/asset/images/titre.png"">
 </figure>
 </div>
 <?php if ($bool) {
