@@ -1,3 +1,5 @@
+/*Richard login page*/
+
 .maincontainer{
     display: block;
 }
@@ -59,3 +61,89 @@
     background-image: linear-gradient(120deg, rgb(226, 76, 76), rgb(212, 45, 45));
     
 }
+
+/*Richard login end*/
+
+/*Dena dashboard pages*/
+
+
+/*Dena dashboard pages*/
+
+/*Dena menu */
+
+
+
+/* Dena menu end*/
+
+/* Dena footer */
+
+
+
+/* Dena footer end */
+
+
+/*Marie Recipe book page */
+body{
+    width: 100vw;
+    margin: 0;
+    
+}
+button {
+    margin-top: 20px;
+}
+
+h2 {
+    background-color: #F5F5F7;
+    width: 55%;
+    height: 135px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 73px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+
+.modal-card{
+    margin-bottom: 20px;
+}
+
+.tiles_group{
+    margin-top: 50px;
+}
+
+.tile_info{
+    align-self: center;
+    ;
+}
+
+.is-grey{
+    background-color: #F5F5F7;
+}
+
+.title{
+    font-size: 25px;
+}
+.subtitle{
+    font-size: 15px;
+}
+p{
+    font-size: 12px;
+}
+
+
+/*Marie Recipe book page */
+

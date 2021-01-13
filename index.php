@@ -34,9 +34,15 @@
         <?php
             if ($_SESSION) {
                 include("include/dashboard.php");
+                
+               
+                
 
             } else {
+                
                 include("include/login.php");
+
+                
             }
         ?>
 
