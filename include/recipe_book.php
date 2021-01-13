@@ -42,7 +42,6 @@ if(isset($_POST['recipe_name']) && isset($_POST['date']) && !empty($_POST['recip
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
 
-
 </head>
 
 <body>
@@ -57,6 +56,7 @@ if(isset($_POST['recipe_name']) && isset($_POST['date']) && !empty($_POST['recip
     <?php 
     include("../menubar.php");
     ?>
+
 
       <div class="tile is-ancestor">
         <div class="tile is-vertical is-parent is-8">
@@ -147,6 +147,7 @@ if(isset($_POST['recipe_name']) && isset($_POST['date']) && !empty($_POST['recip
 
           </div>
         </section>
+
 <!------------- Marie modal recipe end ------------->
 
 

@@ -1,9 +1,12 @@
 <div id="titlebox">
 <figure class="mage is-16by9">
+
+<?php if ($_SESSION['logged'] == true) {
+
   <img src="./asset/images/titre.png">
 </figure>
 </div>
-<?php if ($bool) {
+
     echo "<p style='visibility: visible;' id='loginFailed'>Login failed !</p>";
  } else {
     echo "<p style='visibility: hidden;'>Login failed !</p>";
@@ -12,7 +15,9 @@
  <div class="flex">
 <div id="imagebox">
 <figure class="image is-1by1">
+
   <img src="./asset/images/chef.png">
+
 </figure>
 </div>
 <form method="post" action="" class="flex">
