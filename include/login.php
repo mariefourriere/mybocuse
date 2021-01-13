@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 
 ?>
 
@@ -9,7 +9,7 @@ session_start();
 <img src="./asset/images/titre.png">
 </figure>
 </div>
-<?php if ($_SESSION['logged'] == true) {
+<?php if ($_SESSION) {
 
     echo "<p style='visibility: visible;' id='loginFailed'>Login failed !</p>";
  } else {
@@ -58,5 +58,5 @@ session_start();
     <input type="submit" name="submit" id="submit" value="LOGIN" disabled>
 </form>
   </div>
-<script src="script.js"></script> 
+<script src="./script.js"></script> 
 
