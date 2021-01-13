@@ -7,7 +7,7 @@
         $request = $dbbocuse->prepare('SELECT email, passwd, account_type FROM users WHERE email=?');
         $request->execute(array($validuser));
 
-        $datas = $request->fetch();
+       
         if(!isset($_SESSION['logged'])){
             $_SESSION['logged'] = false;
         }
@@ -27,8 +27,6 @@
         $authenticationLog = [date("[d/m/y, H:i:s] - "),$userEmail];
 
         file_put_contents('log.txt', $authenticationLog, FILE_APPEND); // add path to log
-
-        
 
         $validuser = $_POST['email']; // add id input email
         $validpasswd = $_POST['password']; // add id input password

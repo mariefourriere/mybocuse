@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../dashboard.css" rel="stylesheet">
+    <link href="./dashboard.css" rel="stylesheet">
     <title> Dashboard </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
   </head>
@@ -26,7 +26,7 @@
         <!------------------------------LINK-TO-HOMEPAGE-------------------------------------->
 
             <figure class="homebutton" id=hombebutton>
-                <img src="../asset/icons/home.png">
+                <img src="./asset/icons/home.png">
           </figure>
            <script type="text/javascript">
                      document.getElementById("homebutton").onclick = function () {
@@ -36,7 +36,7 @@
          <!------------------------------LINK-TO-RECIPE-AGENDA------------------------------------->
 
           <figure class="calendarbutton" id=calendarbutton>
-            <img src="../asset/icons/calendar.png">
+            <img src="./asset/icons/calendar.png">
          </figure>
 
          <script type="text/javascript">
@@ -47,14 +47,14 @@
          <!------------------------------LINK-TO-LOGOUT------------------------------------->
 
         <figure class="logoutbutton">
-                <img src="../asset/icons/logout.png" id=logoutbutton>
+                <img src="./asset/icons/logout.png" id=logoutbutton>
           </figure>
           </article>
         </div>  
 
         <script type="text/javascript">
                      document.getElementById("logoutbutton").onclick = function () {
-                      location.href = '../logout.php';
+                      location.href = './logout.php';
                         };
           </script>
 
@@ -67,7 +67,7 @@
               <p class="histudent">Hi Prénom Nom!</p>
               <p class="welcometext">It's good to see you again.</p>
               <figure class="profilepicturestudent">
-                  <img src="../asset/images/student.png">
+                  <img src="./asset/images/student.png">
             </figure>
             </article>
 
@@ -119,7 +119,7 @@
                             <p class= "dayoftheweek">Monday </p>
                             <p class= recipe>  Tarte aux fraises </p>
                         </div>
-                        <img src="../asset/images/Yellow.png" class="yellowsticker">  
+                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
                     
                     </li>
                     <li>  
@@ -127,7 +127,7 @@
                             <p class= "dayoftheweek">Monday </p>
                             <p class= recipe>  Tarte aux fraises </p>
                         </div>
-                        <img src="../asset/images/Yellow.png" class="yellowsticker">  
+                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
                     
                     </li> 
                     <li>  
@@ -135,7 +135,7 @@
                             <p class= "dayoftheweek">Monday </p>
                             <p class= recipe>  Tarte aux fraises </p>
                         </div>
-                        <img src="../asset/images/Yellow.png" class="yellowsticker">  
+                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
                     
                     </li>
                     <li>  
@@ -143,7 +143,7 @@
                             <p class= "dayoftheweek">Monday </p>
                             <p class= recipe>  Tarte aux fraises </p>
                         </div>
-                        <img src="../asset/images/Yellow.png" class="yellowsticker">  
+                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
                     
                     </li>
                     <li>  
@@ -151,7 +151,7 @@
                             <p class= "dayoftheweek">Monday </p>
                             <p class= recipe>  Tarte aux fraises </p>
                         </div>
-                        <img src="../asset/images/Yellow.png" class="yellowsticker">  
+                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
                     
                     <button class="button is-black" id=agendabutton>the recettes' agenda</button>
               
@@ -189,7 +189,7 @@
 <!-----------------------------------------------FOOTER-------------------------------------------------------------->
 
 <?php 
-    include("../footer.php");
+    include("./footer.php");
     ?>
 
   </body>
