@@ -1,76 +1,60 @@
-//Marie added regex start
-const emailInput = document.querySelector('#emailInput')
-const passwordInput = document.querySelector('#passwordInput')
-const validate = document.querySelector('#validate')
-validate.disabled = true
-let boolMail = false
-let boolPwd = false
+const main = document.querySelector('main');
+const form = document.querySelector('form');
+const emailInput = document.querySelector('#email');
+const passwordInput = document.querySelector('#password');
+const submitButton = document.querySelector('#submit');
 
-const validateEmail = (email) => {
-    let patternEmail = /^([^\s@]+@[^\s@]+\.[^\s@]+)$/g
-    if (email.match(patternEmail)) {
-        return true
-    } else {
-        return false
+submitButton.disabled = true;
+mailError.style.visibility = "hidden";
+pwdError.style.visibility = "hidden";
+
+let emailValue = emailInput.value;
+let passwordValue = passwordInput.value;
+
+let emailPattern = /^[\w-]+(\.?[\w-]+)?@{1}[a-z0-9]+\.{1}[a-z]+$/i;
+let passwordPattern = /^\S{6,}$/;
+
+function inputsCheck(){
+    if(emailValue.match(emailPattern) && passwordValue.match(passwordPattern)){
+        submitButton.disabled = false;
     }
-}
-const validatePwd = (pwd) => {
-    let patternOneDigit = /(\d)+/ig
-    let patternUpperCase = /([A-Z])+/g
-    let patternSpecialChar = /([\+\?\$\^\&])+/g
-    let patternNumberofChar = /(?=.{8,18})/g
-    let patternLowerCase = /([a-z])+/g
-
-    if ((pwd.match(patternOneDigit)) && (pwd.match(patternUpperCase)) && (pwd.match(patternSpecialChar)) && (pwd.match(patternNumberofChar)) && (pwd.match(patternLowerCase))) {
-        return true
-    } else {
-        return false
+    else{
+        submitButton.disabled = true;
     }
 }
 
-emailInput.addEventListener('change', (e) => {
-    if (validateEmail(e.target.value)) {
-        if (!boolMail) {
-            boolMail = true
-        }
-    } else if (!e.target.value) {
-        if (boolMail) {
-            boolMail = false
-        }
+function emailCheck(){
+    let invalidEmail = document.querySelector('#mailError');
 
-    } else {
-        if (boolMail) {
-            boolMail = false
-        }
+    if(emailValue.match(emailPattern)){
+        invalidEmail.style.visibility = 'hidden';
     }
-    if (boolMail && boolPwd) {
-        validate.disabled = false
-    } else {
-        validate.disabled = true
+    else{
+        invalidEmail.style.visibility = 'visible';
     }
+}
 
+function passwordCheck(){
+    let invalidPassword = document.querySelector('#pwdError');
+
+    if(passwordValue.match(passwordPattern)){
+        invalidPassword.style.visibility = 'hidden';
+    }
+    else{
+        invalidPassword.style.visibility = 'visible';
+    }
+}
+
+emailInput.addEventListener('change', (e) =>{
+    emailValue = e.target.value;
+
+    inputsCheck();
+    emailCheck();
 })
 
-passwordInput.addEventListener('change', (e) => {
-    if (validatePwd(e.target.value)) {
-        if (!boolPwd) {
-            boolPwd = true
-        }
-    } else if (!e.target.value) {
-        if (boolPwd) {
-            boolPwd = false
-        }
+passwordInput.addEventListener('change', (e) =>{
+    passwordValue = e.target.value;
 
-    } else {
-        if (boolPwd) {
-            boolPwd = false
-        }
-    }
-    if (boolMail && boolPwd) {
-        validate.disabled = false
-    } else {
-        validate.disabled = true
-    }
+    inputsCheck();
+    passwordCheck();
 })
-
-// Marie added regex end
