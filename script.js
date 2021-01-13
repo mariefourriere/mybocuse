@@ -1,76 +1,104 @@
-//Marie added regex start
-const emailInput = document.querySelector('#emailInput')
-const passwordInput = document.querySelector('#passwordInput')
-const validate = document.querySelector('#validate')
-validate.disabled = true
+const validateEmail = (email) => {
+    let pattern = /^[\w-]+(\.?[\w-]+)?@\w+\.[a-z]+$/i
+    if (email.match(pattern)) {
+        return true
+    } else {
+        return false
+    }
+}
+
+const validatePwd = (pwd) => {
+    let pattern1 = /[a-z]+/
+    let pattern2 = /[A-Z]+/
+    let pattern3 = /\d+/
+    // let pattern4 = /[\W_]+/
+    let pattern5 = /^\S{8,18}$/
+    let sentence = pwd
+    if (sentence.match(pattern1) && sentence.match(pattern2) && sentence.match(pattern3) && sentence.match(pattern5)) {
+        return true
+    } else {
+        return false
+    }
+}
+const mail = document.querySelector('#email')
+const pwd = document.querySelector('#password')
+const inputs = document.getElementsByClassName('input')
+const btn = document.querySelector('#submit')
+const mailError = document.querySelector('#mailError')
+const pwdError = document.querySelector('#pwdError')
 let boolMail = false
 let boolPwd = false
 
-const validateEmail = (email) => {
-    let patternEmail = /^([^\s@]+@[^\s@]+\.[^\s@]+)$/g
-    if (email.match(patternEmail)) {
-        return true
-    } else {
-        return false
-    }
-}
-const validatePwd = (pwd) => {
-    let patternOneDigit = /(\d)+/ig
-    let patternUpperCase = /([A-Z])+/g
-    let patternSpecialChar = /([\+\?\$\^\&])+/g
-    let patternNumberofChar = /(?=.{8,18})/g
-    let patternLowerCase = /([a-z])+/g
+mailError.style.visibility = "hidden"
+pwdError.style.visibility = "hidden" 
 
-    if ((pwd.match(patternOneDigit)) && (pwd.match(patternUpperCase)) && (pwd.match(patternSpecialChar)) && (pwd.match(patternNumberofChar)) && (pwd.match(patternLowerCase))) {
-        return true
-    } else {
-        return false
-    }
-}
-
-emailInput.addEventListener('change', (e) => {
+mail.addEventListener('change', (e) => {
     if (validateEmail(e.target.value)) {
         if (!boolMail) {
+            mail.style.border = "1px solid green";
+            mailError.style.visibility = "hidden"
             boolMail = true
+        } else {
+            mail.style.border = "1px solid green";
+            mailError.style.visibility = "hidden"
         }
     } else if (!e.target.value) {
         if (boolMail) {
+            mail.style.border = "1px solid grey"
+            mailError.style.visibility = "hidden"
             boolMail = false
+        } else {
+            mail.style.border = "1px solid grey"
+            mailError.style.visibility = "hidden"
         }
-
     } else {
         if (boolMail) {
+            mail.style.border = "1px solid red"
+            mailError.style.visibility = "visible"
             boolMail = false
+        } else {
+            mail.style.border = "1px solid red"
+            mailError.style.visibility = "visible"
         }
     }
     if (boolMail && boolPwd) {
-        validate.disabled = false
+        btn.disabled = false
     } else {
-        validate.disabled = true
+        btn.disabled = true
     }
-
 })
-
-passwordInput.addEventListener('change', (e) => {
+pwd.addEventListener('keyup', (e) => {
     if (validatePwd(e.target.value)) {
-        if (!boolPwd) {
+        if (!boolPwd) {   
+            pwd.style.border = "1px solid green"
+            pwdError.style.visibility = "hidden"        
             boolPwd = true
+        } else {
+            pwd.style.border = "1px solid green"
+            pwdError.style.visibility = "hidden" 
         }
     } else if (!e.target.value) {
         if (boolPwd) {
+            pwd.style.border = "1px solid grey"
+            pwdError.style.visibility = "hidden" 
             boolPwd = false
+        } else {
+            pwd.style.border = "1px solid grey"
+            pwdError.style.visibility = "hidden" 
         }
-
     } else {
         if (boolPwd) {
+            pwd.style.border = "1px solid red"
+            pwdError.style.visibility = "visible" 
             boolPwd = false
+        } else {
+            pwd.style.border = "1px solid red"
+            pwdError.style.visibility = "visible" 
         }
     }
     if (boolMail && boolPwd) {
-        validate.disabled = false
+        btn.disabled = false
     } else {
-        validate.disabled = true
+        btn.disabled = true
     }
 })
-
-// Marie added regex end
