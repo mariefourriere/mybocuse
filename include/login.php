@@ -1,11 +1,15 @@
+<?php
+session_start();
+
+?>
+
+  
 <div id="titlebox">
 <figure class="mage is-16by9">
-
-<?php if ($_SESSION['logged'] == true) {
-
-  <img src="./asset/images/titre.png">
+<img src="./asset/images/titre.png">
 </figure>
 </div>
+<?php if ($_SESSION['logged'] == true) {
 
     echo "<p style='visibility: visible;' id='loginFailed'>Login failed !</p>";
  } else {
@@ -55,3 +59,4 @@
 </form>
   </div>
 <script src="script.js"></script> 
+
