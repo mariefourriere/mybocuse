@@ -9,7 +9,7 @@
   </head>
   <body>
 
-<!---------------------------------------MENU----DASHBOARD---------------------------------------------->
+<!------------------------------------------MENU----DASHBOARD------------------------------------------------->
 
    <div class = studentdashboard>
 
@@ -32,7 +32,7 @@
 <!---------------------------------------LEFT-SIDE-OF DASHBOARD---------------------------------------------->
 
 
-        <div class="tile is-parent is-5 is-vertical" id=leftsidedashboard>
+<div class="tile is-parent is-5 is-vertical" id=leftsidedashboard>
             <article class="tile is-child box" id=namedashboard>
               <p class="histudent">Hi Prénom Nom!</p>
               <p class="welcometext">It's good to see you again.</p>
@@ -150,8 +150,6 @@
 
 <!-----------------------------------------------FOOTER-------------------------------------------------------------->
 
-
-    
 
   </body>
 </html>
