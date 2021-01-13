@@ -42,12 +42,22 @@
   cursor: pointer; 
 }
 
+.calendarbutton{
+    padding-top: 35px;
+    text-align: center;
+    cursor: pointer; 
+  }
+
+.calendarbutton:hover {
+    opacity: 0.5; 
+}
+
 .homebutton:hover {
     opacity: 0.5; 
 } 
 
 .logoutbutton{
-    margin-top: 420px;
+    margin-top: 350px;
     text-align: center;
     cursor: pointer; 
 }
@@ -105,7 +115,7 @@
 #quotedashboard {
     height: 200px; 
     border-radius: 14px;
-    background-image: url('images/Screenshot\ 2021-01-12\ at\ 11.00\ 1\ \(1\).png');
+    background-image: url('/asset/images/quotebg.png');
     opacity: 0.9;
 }
 
@@ -134,7 +144,6 @@
     text-shadow: 1px 1px 1.2px black;
 
 }
-
 
 /*-----------------------------------------------------ATTENDANCE----------------------------------------------------*/
 
