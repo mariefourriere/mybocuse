@@ -17,17 +17,41 @@
         <div class="tile is-parent is-2" id=paddingmenu >
           <article class="tile is-child box has-background-black " id=menubar>
             <p class="title" id=titlemenu> my.</p>
-            <figure class="homebutton">
+
+        <!------------------------------LINK-TO-HOMEPAGE-------------------------------------->
+
+            <figure class="homebutton" id=hombebutton>
                 <img src="../asset/icons/home.png">
           </figure>
-          <figure class="calendarbutton">
+           <script type="text/javascript">
+                     document.getElementById("homebutton").onclick = function () {
+                      location.href = 'studentdashboard.php';
+                        };
+          </script>
+         <!------------------------------LINK-TO-RECIPE-AGENDA------------------------------------->
+
+          <figure class="calendarbutton" id=calendarbutton>
             <img src="../asset/icons/calendar.png">
          </figure>
+
+         <script type="text/javascript">
+                     document.getElementById("calendarbutton").onclick = function () {
+                      location.href = 'recipe_book.php';
+                        };
+          </script>
+         <!------------------------------LINK-TO-LOGOUT------------------------------------->
+
         <figure class="logoutbutton">
-                <img src="../asset/icons/logout.png">
+                <img src="../asset/icons/logout.png" id=logoutbutton>
           </figure>
           </article>
         </div>  
+
+        <script type="text/javascript">
+                     document.getElementById("logoutbutton").onclick = function () {
+                      location.href = '../logout.php';
+                        };
+          </script>
 
 <!---------------------------------------LEFT-SIDE-OF DASHBOARD---------------------------------------------->
 
@@ -124,8 +148,16 @@
                         <img src="../asset/images/Yellow.png" class="yellowsticker">  
                     
                     <button class="button is-black" id=agendabutton>the recettes' agenda</button>
-                        
-                    </li>
+              
+                 <!------------------------------LINK-TO-RECIPE-AGENDA------------------------------------->
+                    <script type="text/javascript">
+                     document.getElementById("agendabutton").onclick = function () {
+                      location.href = 'recipe_book.php';
+                        };
+                    </script>
+                 <!------------------------------LINK-TO-RECIPE-AGENDA------------------------------------->
+
+                      </li>
                   
                    </ul>
                 </article>
@@ -150,6 +182,9 @@
 
 <!-----------------------------------------------FOOTER-------------------------------------------------------------->
 
+<?php 
+    include("../footer.php");
+    ?>
 
   </body>
 </html>
