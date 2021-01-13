@@ -20,7 +20,7 @@
               <p class="histudent">Hi Prénom Nom!</p>
               <p class="welcometext">It's good to see you again.</p>
               <figure class="profilepicture">
-                  <img src="./images/student.png">
+                  <img src="./asset/images/student.png">
             </figure>
             </article>
 
@@ -72,7 +72,7 @@
                             <p class= "dayoftheweek">Monday </p>
                             <p class= recipe>  Tarte aux fraises </p>
                         </div>
-                        <img src="./images/Yellow.png" class="yellowsticker">  
+                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
                     
                     </li>
                     <li>  
@@ -80,7 +80,7 @@
                             <p class= "dayoftheweek">Monday </p>
                             <p class= recipe>  Tarte aux fraises </p>
                         </div>
-                        <img src="./images/Yellow.png" class="yellowsticker">  
+                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
                     
                     </li> 
                     <li>  
@@ -88,7 +88,7 @@
                             <p class= "dayoftheweek">Monday </p>
                             <p class= recipe>  Tarte aux fraises </p>
                         </div>
-                        <img src="./images/Yellow.png" class="yellowsticker">  
+                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
                     
                     </li>
                     <li>  
@@ -96,7 +96,7 @@
                             <p class= "dayoftheweek">Monday </p>
                             <p class= recipe>  Tarte aux fraises </p>
                         </div>
-                        <img src="./images/Yellow.png" class="yellowsticker">  
+                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
                     
                     </li>
                     <li>  
@@ -104,7 +104,7 @@
                             <p class= "dayoftheweek">Monday </p>
                             <p class= recipe>  Tarte aux fraises </p>
                         </div>
-                        <img src="./images/Yellow.png" class="yellowsticker">  
+                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
                     
                     <button class="button is-black" id=agendabutton>the recettes' agenda</button>
                         
