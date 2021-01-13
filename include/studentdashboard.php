@@ -3,26 +3,23 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="studentdash.css" rel="stylesheet">
+    <link href="dashboard.css" rel="stylesheet">
     <title> Dashboard </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
   </head>
   <body>
 
-<!---------------------------------------MENU----DASHBOARD---------------------------------------------->
-<?php 
-include("../menubar.php");
-?>
+<!------------------------------------------MENU----DASHBOARD------------------------------------------------->
 
    
 <!---------------------------------------LEFT-SIDE-OF DASHBOARD---------------------------------------------->
 
 
-        <div class="tile is-parent is-5 is-vertical" id=leftsidedashboard>
+<div class="tile is-parent is-5 is-vertical" id=leftsidedashboard>
             <article class="tile is-child box" id=namedashboard>
               <p class="histudent">Hi Prénom Nom!</p>
               <p class="welcometext">It's good to see you again.</p>
-              <figure class="profilepicture">
+              <figure class="profilepicturestudent">
                   <img src="./asset/images/student.png">
             </figure>
             </article>
@@ -135,8 +132,6 @@ include("../menubar.php");
           </div>
 
 <!-----------------------------------------------FOOTER-------------------------------------------------------------->
-
-
 
 
   </body>
