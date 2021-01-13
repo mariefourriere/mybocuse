@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="dashboard.css" rel="stylesheet">
+    <link href="../dashboard.css" rel="stylesheet">
     <title> Dashboard </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
   </head>
@@ -18,13 +18,13 @@
         <article class="tile is-child box has-background-black " id=menubar>
           <p class="title" id=titlemenu> my.</p>
           <figure class="homebutton">
-              <img src="./asset/icons/home.png">
+              <img src="../asset/icons/home.png">
         </figure>
         <figure class="calendarbutton">
-          <img src="./asset/icons/calendar.png">
+          <img src="../asset/icons/calendar.png">
        </figure>
       <figure class="logoutbutton">
-              <img src="./asset/icons/logout.png">
+              <img src="../asset/icons/logout.png">
         </figure>
         </article>
       </div>  
@@ -41,7 +41,7 @@
               <p class="hichef">Hi Chef Nom!</p>
               <p class="welcometext">It's good to see you again.</p>
               <figure class="profilepicturechef">
-                  <img src="./asset/images/chefdashboard.png">
+                  <img src="../asset/images/chefdashboard.png">
             </figure>
             </article>
           </div>
@@ -181,7 +181,7 @@
                             <p class= "dayoftheweek">Monday </p>
                             <p class= recipe>  Tarte aux fraises </p>
                         </div>
-                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
+                        <img src="../asset/images/Yellow.png" class="yellowsticker">  
                     
                     </li>
                     <li>  
@@ -189,7 +189,7 @@
                             <p class= "dayoftheweek">Monday </p>
                             <p class= recipe>  Tarte aux fraises </p>
                         </div>
-                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
+                        <img src="../asset/images/Yellow.png" class="yellowsticker">  
                     
                     </li> 
                     <li>  
@@ -197,7 +197,7 @@
                             <p class= "dayoftheweek">Monday </p>
                             <p class= recipe>  Tarte aux fraises </p>
                         </div>
-                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
+                        <img src="../asset/images/Yellow.png" class="yellowsticker">  
                     
                     </li>
                     <li>  
@@ -205,7 +205,7 @@
                             <p class= "dayoftheweek">Monday </p>
                             <p class= recipe>  Tarte aux fraises </p>
                         </div>
-                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
+                        <img src="../asset/images/Yellow.png" class="yellowsticker">  
                     
                     </li>
                     <li>  
@@ -213,7 +213,7 @@
                             <p class= "dayoftheweek">Monday </p>
                             <p class= recipe>  Tarte aux fraises </p>
                         </div>
-                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
+                        <img src="../asset/images/Yellow.png" class="yellowsticker">  
                     
                     <button class="button is-black" id=agendabutton>the recettes' agenda</button>
                         
