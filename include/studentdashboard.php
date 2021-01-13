@@ -5,28 +5,69 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="studentdash.css" rel="stylesheet">
+    <link href="../dashboard.css" rel="stylesheet">
     <title> Dashboard </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
   </head>
   <body>
 
+
 <!---------------------------------------MENU----DASHBOARD---------------------------------------------->
 
-<?php 
+<!------------------------------------------MENU----DASHBOARD------------------------------------------------->
 
-include("menubar.php");
-?>
-   
+   <div class = studentdashboard>
+
+    <div class="tile is-ancestor">
+        <div class="tile is-parent is-2" id=paddingmenu >
+          <article class="tile is-child box has-background-black " id=menubar>
+            <p class="title" id=titlemenu> my.</p>
+
+        <!------------------------------LINK-TO-HOMEPAGE-------------------------------------->
+
+            <figure class="homebutton" id=hombebutton>
+                <img src="../asset/icons/home.png">
+          </figure>
+           <script type="text/javascript">
+                     document.getElementById("homebutton").onclick = function () {
+                      location.href = 'studentdashboard.php';
+                        };
+          </script>
+         <!------------------------------LINK-TO-RECIPE-AGENDA------------------------------------->
+
+          <figure class="calendarbutton" id=calendarbutton>
+            <img src="../asset/icons/calendar.png">
+         </figure>
+
+         <script type="text/javascript">
+                     document.getElementById("calendarbutton").onclick = function () {
+                      location.href = 'recipe_book.php';
+                        };
+          </script>
+         <!------------------------------LINK-TO-LOGOUT------------------------------------->
+
+        <figure class="logoutbutton">
+                <img src="../asset/icons/logout.png" id=logoutbutton>
+          </figure>
+          </article>
+        </div>  
+
+        <script type="text/javascript">
+                     document.getElementById("logoutbutton").onclick = function () {
+                      location.href = '../logout.php';
+                        };
+          </script>
+
+
 <!---------------------------------------LEFT-SIDE-OF DASHBOARD---------------------------------------------->
 
 
-        <div class="tile is-parent is-5 is-vertical" id=leftsidedashboard>
+<div class="tile is-parent is-5 is-vertical" id=leftsidedashboard>
             <article class="tile is-child box" id=namedashboard>
               <p class="histudent">Hi Prénom Nom!</p>
               <p class="welcometext">It's good to see you again.</p>
-              <figure class="profilepicture">
-                  <img src="./asset/images/student.png">
+              <figure class="profilepicturestudent">
+                  <img src="../asset/images/student.png">
             </figure>
             </article>
 
@@ -78,7 +119,7 @@ include("menubar.php");
                             <p class= "dayoftheweek">Monday </p>
                             <p class= recipe>  Tarte aux fraises </p>
                         </div>
-                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
+                        <img src="../asset/images/Yellow.png" class="yellowsticker">  
                     
                     </li>
                     <li>  
@@ -86,7 +127,7 @@ include("menubar.php");
                             <p class= "dayoftheweek">Monday </p>
                             <p class= recipe>  Tarte aux fraises </p>
                         </div>
-                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
+                        <img src="../asset/images/Yellow.png" class="yellowsticker">  
                     
                     </li> 
                     <li>  
@@ -94,7 +135,7 @@ include("menubar.php");
                             <p class= "dayoftheweek">Monday </p>
                             <p class= recipe>  Tarte aux fraises </p>
                         </div>
-                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
+                        <img src="../asset/images/Yellow.png" class="yellowsticker">  
                     
                     </li>
                     <li>  
@@ -102,7 +143,7 @@ include("menubar.php");
                             <p class= "dayoftheweek">Monday </p>
                             <p class= recipe>  Tarte aux fraises </p>
                         </div>
-                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
+                        <img src="../asset/images/Yellow.png" class="yellowsticker">  
                     
                     </li>
                     <li>  
@@ -110,11 +151,19 @@ include("menubar.php");
                             <p class= "dayoftheweek">Monday </p>
                             <p class= recipe>  Tarte aux fraises </p>
                         </div>
-                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
+                        <img src="../asset/images/Yellow.png" class="yellowsticker">  
                     
                     <button class="button is-black" id=agendabutton>the recettes' agenda</button>
-                        
-                    </li>
+              
+                 <!------------------------------LINK-TO-RECIPE-AGENDA------------------------------------->
+                    <script type="text/javascript">
+                     document.getElementById("agendabutton").onclick = function () {
+                      location.href = 'recipe_book.php';
+                        };
+                    </script>
+                 <!------------------------------LINK-TO-RECIPE-AGENDA------------------------------------->
+
+                      </li>
                   
                    </ul>
                 </article>
@@ -139,8 +188,9 @@ include("menubar.php");
 
 <!-----------------------------------------------FOOTER-------------------------------------------------------------->
 
-
-
+<?php 
+    include("../footer.php");
+    ?>
 
   </body>
 </html>
