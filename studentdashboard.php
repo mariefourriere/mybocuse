@@ -72,7 +72,7 @@ catch(Exception $e)
   
   while ($donnees_student = $student_req->fetch())
   {
-      ?>
+      ?>id="absencehours"
               <p class="hichef">Hi 
 <?php echo $donnees_student['firstname'] . ' ' . $donnees_student['lastname']; 
 }$student_req->closeCursor();
@@ -96,7 +96,7 @@ catch(Exception $e)
 
             <div class="tile is-parent" id=paddingabsences>
                 <article class="tile is-child box" id=absencesdashboard>
-                  <p class="absencehours">0</p>
+                  <p id="absencehours" class="absencehours">0</p>
                   <p class="unjustifiedabsences">Unjustified <br> absences</p>
                 </article>
               </div>
@@ -207,4 +207,41 @@ catch(Exception $e)
     ?>
 
   </body>
+ <script>
+     const buttonAttendance = document.getElementById('attendancebutton');
+     buttonAttendance.addEventListener('click', ()  => {
+  attendancebutton.style.backgroundColor = "red";
+  document.getElementById('attendancebutton').innerText = "Afternoon \n clock out";
+  var heure = new Date().getHours();
+       $.ajax({
+        url : './include/arrival.php?',
+        type : 'POST', 
+        data : 'heure =' + heure,
+         success: function(result){
+         console.log(result);
+        }, error: function(result){
+         console.log('error')
+  }
+        
+     });
+
+  })
+ 
+  const buttonAbsence = document.getElementById('reviewdashboard');
+  buttonAbsence.addEventListener('click', ()  => {
+    buttonAbsence.classList.add("fondBlue");
+       $.ajax({
+        url : './include/absence.php?',
+        type : 'GET',
+         success: function(data){
+           document.getElementById('absencehours').innerText = data; 
+           }, error: function(data){
+         console.log(data);
+  }
+        
+     });
+
+  })
+  
+ </script>
 </html>
