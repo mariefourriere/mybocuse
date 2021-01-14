@@ -52,7 +52,7 @@ catch(Exception $e)
 
          <script type="text/javascript">
                      document.getElementById("calendarbutton").onclick = function () {
-                      location.href = 'recipe_book.php';
+                      location.href = './include/recipe_book.php';
                         };
           </script>
          <!------------------------------LINK-TO-LOGOUT------------------------------------->

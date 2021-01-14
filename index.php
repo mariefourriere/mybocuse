@@ -19,13 +19,13 @@ if (isset($_POST['email']) && isset($_POST['password']) && !empty($_POST['email'
     
     $bool = true;
     //verify here that the email is the right one
-    $request = $dbbocuse->query('SELECT email, password, account_type FROM users');
+    $request = $dbbocuse->query('SELECT email, password, account_type, userid FROM users');
        while($donnees = $request->fetch()){
            
         if($donnees['email'] === $validuser && $donnees['password'] == $password){
             $_SESSION['email'] = $donnees['email'];
             $_SESSION['password'] = $donnees['password'];
-            // $_SESSION['fk_userid'] = $_POST['fk_userid'];
+            $_SESSION['userid'] = $donnees['userid'];
             $_SESSION['account_type'] = $donnees['account_type'];
            }
        }
