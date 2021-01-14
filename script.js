@@ -1,10 +1,11 @@
+
 const main = document.querySelector('main');
 const form = document.querySelector('form');
 const emailInput = document.querySelector('#email');
 const passwordInput = document.querySelector('#password');
 const submitButton = document.querySelector('#submit');
 
-//submitButton.disabled = true;
+submitButton.disabled = true;
 mailError.style.visibility = "hidden";
 pwdError.style.visibility = "hidden";
 
@@ -20,8 +21,11 @@ function inputsCheck(){
     }
     else{
         submitButton.disabled = true;
+
     }
 }
+
+
 
 function emailCheck(){
     let invalidEmail = document.querySelector('#mailError');
@@ -57,4 +61,5 @@ passwordInput.addEventListener('change', (e) =>{
 
     inputsCheck();
     passwordCheck();
+
 })

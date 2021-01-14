@@ -23,10 +23,7 @@ catch(PDOException $e)
          $maDate=   date("Y-m-d");
          $timestamp2 = strtotime($maDate);
          $monId = $_SESSION['userId'];
-         
-
-
-        $getId = "SELECT * FROM departure WHERE  `user_id` = $monId";
+         $getId = "SELECT * FROM departure WHERE  `user_id` = $monId";
         $result = $conn->query($getId);
         $datas = $result->fetch();
         if(!empty($datas)){

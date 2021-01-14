@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@700&family=Roboto:wght@300&display=swap');
+
+
+
+.studentdashboard {
+    padding-left: 50px;
+    padding-top: 4%;
+    margin-right: -11%;
+}
+
+/*--------------------------------------------SIDEBAR-MENU-------------------------------------------------------------*/
+
+#paddingmenu {
+ padding-left: 32.34px;
+ width: 152px;
+ margin-top: -2.7%;
+} 
+
+
+#menubar{
+   /* height: 822px; */
+    height: 662px; 
+    color: white;
+    border-radius: 24px;
+    box-shadow: 5px 3px 3px lightgrey;
+    position: fixed;
+}
+
+#titlemenu  {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 3px;
+    margin-top: 22px;
+    text-shadow: 1px 1px 1.2px white;
+}
+
+.homebutton{
+  margin-top: 60px;
+  text-align: center;
+  cursor: pointer; 
+}
+
+.calendarbutton{
+    padding-top: 35px;
+    text-align: center;
+    cursor: pointer; 
+  }
+
+.calendarbutton:hover {
+    opacity: 0.5; 
+}
+
+.homebutton:hover {
+    opacity: 0.5; 
+} 
+
+.logoutbutton{
+    margin-top: 350px;
+    text-align: center;
+    cursor: pointer; 
+}
+
+.logoutbutton:hover {
+    opacity: 0.5; 
+}
+
+
+#leftsidedashboard{
+    padding-left: 3%;
+    padding-right: 2.3%;
+}
+/*------------------------------------------------HI-STUDENT-PROFILE----------------------------------------------*/
+
+#namedashboard {
+    height: 200px;
+    background-color: #F5F5F7;
+    font-family: 'Baloo Bhai 2', cursive;
+    border-radius: 14px;
+    /*box-shadow: 0px 0px 0px lightgrey; */
+}
+
+.histudent{
+    font-size: 36px;
+    color: black;
+}
+
+.hichef {
+    font-size: 36px;
+    color: black;
+}
+
+.welcometext {
+    color: black;
+    font-family: 'Roboto', sans-serif; 
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.profilepicturestudent {
+    float: right;
+    margin-top: -17%;
+    left: 598px;
+}
+
+.profilepicturechef {
+    float: right;
+    margin-top: -18%;
+}
+
+/*-------------------------------------------------QUOTE---------------------------------------------------*/
+
+
+#quotedashboard {
+    height: 200px; 
+    border-radius: 14px;
+    background-image: url(./asset/images/quotebg.png);
+    opacity: 0.9;
+}
+
+.quotetitle {
+    font-size: 36px;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size: 36px;
+    color: white;
+    text-shadow: 1px 1px 1.2px black;
+}
+
+.quote {
+    color: white; 
+    font-family: 'Roboto', sans-serif; 
+    font-style: italic;
+    font-weight: 600;
+    font-size: 19px;
+    text-shadow: 1px 1px 1.2px black;
+}
+
+.author {
+    font-family: 'Roboto', sans-serif; 
+    font-size: 17px;
+    color: white;
+    font-weight: 500;
+    text-shadow: 1px 1px 1.2px black;
+
+}
+
+/*-----------------------------------------------------ATTENDANCE----------------------------------------------------*/
+
+#attendancedashboard{
+    background-color: #F5F5F7;
+    font-family: 'Baloo Bhai 2', cursive;
+    border-radius: 14px;
+}
+
+#attendancebutton {
+    font-size: 24px;
+    border-radius: 14px;
+    width: 242px;
+    height: 77px;
+    margin-top: -14%;
+    margin-left: 52%;
+}
+
+#attendancebutton:hover {
+   opacity: 0.7; 
+}
+
+.attendancetitle {
+    font-size: 31px;
+    color:black;
+
+}
+
+.encodetitle{
+    font-family: 'Roboto', sans-serif; 
+    font-size: 16px;
+    color: #454746;
+    font-weight: 500;
+    margin-top:30px;
+}
+
+#paddingabsences{
+    margin-left: -10px;  
+
+}
+
+#absencesdashboard{
+    border-radius: 14px;
+    width: 95px;
+    background-color: #F5F5F7;
+
+}
+
+#reviewdashboard{
+    border-radius: 14px;
+    background-color: black;
+    width: 95px;
+    cursor: pointer; 
+    padding-top: 40%;
+
+}
+
+#reviewdashboard:hover {
+    opacity: 0.7;
+}
+
+.reviewabsencebutton{
+    color: white;
+    font-family: 'Roboto', sans-serif; 
+    font-size: 23px;
+    cursor: pointer; 
+    text-align: center;
+}
+
+
+.absencehours{
+    color:grey;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size: 110px;
+    text-align: center;
+}
+
+.unjustifiedabsences{
+   color:black;
+   font-family: 'Roboto', sans-serif; 
+   font-size: 20px;
+   text-align: center;
+}
+
+
+/*----------------------------CHEFFFF--STUDENTS-ATTENDANCE--------------------------------------*/
+
+#titleattendance{
+    font-family: 'Baloo Bhai 2', cursive;
+    background-color: #F5F5F7;
+    margin-top: 13%;
+    color: black;
+    font-size: 26px;
+}
+
+
+.panel-block{
+    font-family: 'Roboto', sans-serif; 
+    color: black;
+}
+.panel-block:hover{
+    cursor: default;
+}
+
+.numberofabsences{
+    /*padding-left: ; */
+    padding-left: 50%;
+
+}
+
+
+/*----------------------------------------------------THE-RECETTE-----------------------------------------------*/
+/*---------------------------START-CHANGES-CHEF------------------------------------*/
+#chefdashboardtherecette{
+    width: 480px;
+    height: 470px; 
+    margin-top: 19%;
+    padding-top: 10%;
+}
+/*---------------------------END-CHANGES-CHEF------------------------------------*/
+
+
+.therecettetitle{
+
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size: 33px;
+    color: black;
+    margin-left: 30px;
+}
+
+.weekrecette {
+    font-family: 'Roboto', sans-serif; 
+    color:black;
+    font-size: 19px;
+    padding-bottom: 20px;
+    margin-left: 30px;
+}
+
+#therecette{
+    width: 480px;
+    height: 470px; 
+    margin-top: 19%;
+}
+
+#therecetteradius{
+    border-radius: 14px;
+    background-color: #F5F5F7;
+
+}
+
+.dayoftheweek{
+    float: left;
+    font-family: 'Baloo Bhai 2', cursive;
+    color: black;
+    font-size: 20px;
+
+}
+
+.recipe{
+    float: right;
+    font-family: 'Roboto', sans-serif; 
+    color: black;
+    margin-left: 20px;
+}
+
+.recetteoftheday{
+    position: absolute;
+    margin-left: 44px;
+}
+
+.yellowsticker{
+    margin-left: 30px;
+    margin-top: -9px;
+}
+
+#agendabutton{
+margin-left: 29%;
+}
+
+#agendabutton:hover{
+ opacity: 0.7;
+}
+
+/*-------------------------------------------FOOTER-------------------------------------------------------*/
+
+footer{
+    margin-top: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #F5F5F7;
+}
+
+/*-------------------------------------------RESPONSIVE----------------------------------------------------*/
+
+
+@media only screen and (max-width: 600px) {
+    
+#menubar {
+height: 200px;
+}
+
+#absencesdashboard{
+    width: 400px;
+}
+
+}

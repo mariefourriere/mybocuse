@@ -1,3 +1,6 @@
+
+/*Richard login page*/
+
 .maincontainer{
     display: block;
 }
@@ -60,53 +63,75 @@
     
 }
 
+/*Richard login end*/
 
-.iconbutton{
 
-    font-size: 24px;
-    color: lightgray;
+/*Marie Recipe book page */
+body{
+    width: 70vw;
+    margin:0;
+    
+}
+button {
+    margin-top: 20px;
 }
 
-.histudent{
-    font-weight: 900;
-    font-size: 36px;
+h2 {
+    background-color: #F5F5F7;
+    width: 55%;
+    height: 135px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 73px;
+    letter-spacing: 0em;
+    text-align: left;
+
 }
 
-.allBoxGrey{
-    background-color: rgb(209, 208, 208)!important;
-}
-
-.allBoxBlack{
-    background-color: black!important;
-}
-
-.attendancetitle{
-    font-weight: 900;
-    font-size: 20px;
-}
-
-.rightSide{
-    float: right;
-    margin-right: 50px;
-    border-radius:10px;
-}
-
-.absence{
-    text-align:center;
-}
-
-.absencehours{
-    font-size: 100px;
-    color: black;
-    font-weight: bold;
-}
-
-.reviewabsencebutton{
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
     font-size: 40px;
     text-align: center;
-    color: white;
 }
 
-.fondBlue{
-    background-color:blue!important;
+.modal-card{
+    margin-bottom: 20px;
 }
+
+.tiles_group{
+    margin-top: 50px;
+}
+
+.tile_info{
+    align-self: center;
+    ;
+}
+
+.is-grey{
+    background-color: #F5F5F7;
+}
+
+p.title{
+    font-size: 25px;
+}
+.subtitle{
+    font-size: 15px;
+}
+p{
+    font-size: 12px;
+}
+.booked_recipe{
+    background-color: #F5F5F7;
+    font-size: 40px;
+}
+
+/*Marie Recipe book page */
+
+

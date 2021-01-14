@@ -1,9 +1,38 @@
 <?php
-    session_start();
+session_start();
+include("secret.php");
 
-    if(!isset($_SESSION['logged'])){
-        $_SESSION['logged'] = false;
-    }
+try
+{
+	$dbbocuse = new PDO('mysql:host=localhost;dbname=mybocuse;charset=utf8', $phpmalog, $phpmapasswd);
+}
+catch(Exception $e)
+{
+        die('Erreur : '.$e->getMessage());
+}
+
+if (isset($_POST['email']) && isset($_POST['password']) && !empty($_POST['email']) && !empty($_POST['password'])){
+
+    $validuser = $_POST['email'];
+    $password = $_POST['password'];
+    
+    
+    $bool = true;
+    //verify here that the email is the right one
+    $request = $dbbocuse->query('SELECT email, password, account_type, userid FROM users');
+       while($donnees = $request->fetch()){
+           
+        if($donnees['email'] === $validuser && $donnees['password'] == $password){
+            $_SESSION['email'] = $donnees['email'];
+            $_SESSION['password'] = $donnees['password'];
+            $_SESSION['userid'] = $donnees['userid'];
+            $_SESSION['account_type'] = $donnees['account_type'];
+           }
+       }
+}else{
+    $bool = false;
+}
+   
 ?>
 
 <!DOCTYPE html>
@@ -11,62 +40,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <script
   src="https://code.jquery.com/jquery-3.5.1.min.js"
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
   crossorigin="anonymous"></script> 
+
 </head>
 <body>
+<main class="maincontainer">
+<?php
+ 
+if($_SESSION){
+    
+    if($_SESSION['account_type'] === "student"){
+        include('./include/studentdashboard.php');
+    }else{
+        include('./include/studentdashboard.php');
+    }
    
-    <main class="maincontainer">
 
-    <?php
-    if($_SESSION['logged'] == true){
-        include("./include/dashboard.php"); // add path to profile
-    }
-    else if(isset($_POST['email']) AND ($_POST['password'])){ // add id input email and password
-        $userEmail = 'email: ' . $_POST['email'] . " \n"; // add id input email
-        $authenticationLog = [date("[d/m/y, H:i:s] - "),$userEmail];
+    
+}else{
+    include('./include/login.php');
+}
 
-        //file_put_contents('log.txt', $authenticationLog, FILE_APPEND); // add path to log
-
-        // include("secret.php");
-        $dbbocuse = new PDO('mysql:host=localhost; dbname=mybocuse', 'user', 'P@ssW0rd', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-
-        $validuser = $_POST['email']; // add id input email
-        $validpasswd = $_POST['password']; // add id input password
-
-        $request = $dbbocuse->prepare('SELECT userid,email, passwd FROM users WHERE email=?');
-        $request->execute(array($validuser));
-        
-
-        $datas = $request->fetch();
-        if(!empty($datas)){
-            if($datas['email'] == $validuser AND $datas['passwd'] == $validpasswd){
-                $_SESSION['logged'] = true;
-                $_SESSION['userId'] = $datas['userid'];
-            }
-        }
-
-        if($_SESSION['logged'] == true){
-            include("./include/dashboard.php"); // add path to profile
-        }
-        else{
-            include("./include/login.php"); // add path to form
-        }
-    }
-    else{
-        include("./include/login.php"); // add path to form
-    }
 ?>
 
-    </main>
-    <footer class="footer">
-    </footer>
-    <script src="script.js"></script>
+</main>
+    
+   
+
+    
+
 </body>
 </html>
-

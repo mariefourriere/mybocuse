@@ -17,26 +17,20 @@ try {
              $maDate=   date("Y-m-d");
              $timestamp2 = strtotime($maDate);
              $monId = $_SESSION['userId'];
-            $getId = "SELECT * FROM departure WHERE  `user_id` = $monId";
+             $i=0;
+            $getId = "SELECT * FROM departure WHERE  `user_id` = $monId and arrivals is null or departures is null";
             $result = $conn->query($getId);
-            $datas = $result->fetch();
-            if(!empty($datas)){
-                echo " <div >";
-               while($donnees = $datas){
-                $data = 'deja inscris';
-                echo json_encode($data); 
-            }
-
-            echo "</div>
-          </div>";
+            
+            while($row = $result->fetch()) {
+                $i++;
+                if(!$row){  
+                 echo null;
+                }else{
+                  echo $i;
+                }
                 
-
-        }else{
-            $data = 'Pas encore inscris';
-            echo json_encode($data);
-        }
+            }
+            
     }
 
 ?>
-
- 

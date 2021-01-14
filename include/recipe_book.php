@@ -1,10 +1,11 @@
 <?php
 session_start();
-
 include('../secret.php');
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=Bocuze;charset=utf8', $php_user, $php_passw);
+
+	$bddbocuse = new PDO('mysql:host=localhost;dbname=mybocuse;charset=utf8', $phpmalog, $phpmapasswd);
+
 }
 catch(Exception $e)
 {
@@ -15,20 +16,18 @@ if(isset($_POST['recipe_name']) && isset($_POST['date']) && !empty($_POST['recip
 {
   $recipe_name = $_POST['recipe_name'];
   $date = $_POST['date'];
-  $fk_userid= $_POST['fk_userid'];
-  
-  $req = $bdd->prepare('INSERT INTO recipes (recipe_name, date, fk_userid) VALUES(:recipe_name, :date, :fk_userid)');
+    
+  $req = $bddbocuse->prepare('INSERT INTO recipes (recipe_name, date, fk_userid) VALUES(:recipe_name, :date, :fk_userid)');
 
-  $req->execute(array(
+    $req->execute(array(
     'recipe_name' => $recipe_name,
     'date' => $date,
-    'fk_userid' => $fk_userid
+    'fk_userid' => $_SESSION['userid']
   ));
 
-  header('Location: ../include/recipe_book.php');
+  // header('Location: ../include/recipe_book.php');
 }
-?>
-
+?> 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,30 +36,36 @@ if(isset($_POST['recipe_name']) && isset($_POST['date']) && !empty($_POST['recip
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calendar</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  
   <link rel="stylesheet" type="text/css" href="../styles.css">
   <!-- Baloo Bhai 2 font -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
   <!------------- Marie recipe page start------------->
   <header>
-    <h2>Agenda recipe</h2>
+    <h2 id=recipetitleagenda>Agenda recipe</h2>
   </header>
 
   <main>
     <section class="tiles_group">
 
+    <?php 
+    include("../menubar.php");
+    ?>
+
+
       <div class="tile is-ancestor">
-        <div class="tile is-vertical is-parent is-8">
-          <div class="tile is-child box">
+        <div class="tile is-vertical is-parent is-8" id=marginagendabox>
+          <div class="tile is-child box" id=agendabox>
             
+  
 <?php
 
 
- $reponse = $bdd->query('SELECT recipe_name, date, fk_userid FROM recipes');
+ $reponse = $bddbocuse->query('SELECT recipe_name, date, fk_userid FROM recipes');
   
   while ($donnees = $reponse->fetch())
   {
@@ -70,7 +75,9 @@ if(isset($_POST['recipe_name']) && isset($_POST['date']) && !empty($_POST['recip
     </p>
 
     <p class="subtitle">
-<?php echo 'Date: ' . $donnees['date'] . ', 13:30'; ?>
+<?php 
+echo 'Date: ' . $donnees['date'] . ', 13:30'; 
+?>
 </p> 
 <p>
   <?php
@@ -89,16 +96,13 @@ if(isset($_POST['recipe_name']) && isset($_POST['date']) && !empty($_POST['recip
     
 
 
-  
-
-
           </div>
 
         </div>
-        <div class="tile is-parent is-3 tile_info">
-          <div class="tile is-child box is-grey">
+        <div class="tile is-parent is-3 tile_info" id=tilesubmitmargins>
+          <div class="tile is-child box is-grey" id=submitbox>
             <p class="title">The recipe</p>
-            <p>Each day at 1:30PM a learner chooses one of his favorite recipes and shares it with the rest of the class</p>
+            <p id=textrecipesumbit>Each day at 1:30PM a learner chooses one of his favorite recipes and shares it with the rest of the class</p>
             <button class="button is-black" id="addRecipe">Book a recipe</button>
           </div>
         </div>
@@ -143,6 +147,7 @@ if(isset($_POST['recipe_name']) && isset($_POST['date']) && !empty($_POST['recip
           </div>
         </section>
 
+<!------------- Marie modal recipe end ------------->
 
 
       </div>
@@ -172,8 +177,11 @@ let modal = document.getElementById("myModal");
     }
 
   </script>
-    
-  
+<!------------------------------------------FOOTER------------------------------------------------------>
+    <?php 
+    include("../footer.php");
+    ?>
+
 
 </body>
 
