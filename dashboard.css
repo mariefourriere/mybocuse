@@ -115,7 +115,7 @@
 #quotedashboard {
     height: 200px; 
     border-radius: 14px;
-    background-image: url('/asset/images/quotebg.png');
+    background-image: url(./asset/images/quotebg.png);
     opacity: 0.9;
 }
 

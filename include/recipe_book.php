@@ -1,10 +1,11 @@
 <?php
 session_start();
-
 include('../secret.php');
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=mybocuse;charset=utf8', $phpmalog, $phpmapasswd);
+
+  $bdd = new PDO('mysql:host=localhost;dbname=mybocuse;charset=utf8', $phpmalog, $phpmapasswd);
+
 }
 catch(Exception $e)
 {
@@ -17,12 +18,13 @@ if(isset($_POST['recipe_name']) && isset($_POST['date']) && !empty($_POST['recip
   $date = $_POST['date'];
   $fk_userid= $_POST['fk_userid'];
   
-  $req = $bdd->prepare('INSERT INTO recipes (recipe_name, date, fk_userid) VALUES(:recipe_name, :date, :fk_userid)');
+  $req = $bddbocuse->prepare('INSERT INTO recipes (recipe_name, date, fk_userid) VALUES(:recipe_name, :date, :fk_userid)');
 
   $req->execute(array(
     'recipe_name' => $recipe_name,
     'date' => $date,
-    'fk_userid' => $fk_userid
+    "fk_userid"=>$fk_userid
+    
   ));
 
   header('Location: ../include/recipe_book.php');
@@ -36,6 +38,7 @@ if(isset($_POST['recipe_name']) && isset($_POST['date']) && !empty($_POST['recip
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calendar</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  
   <link rel="stylesheet" type="text/css" href="../styles.css">
   <!-- Baloo Bhai 2 font -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -60,10 +63,11 @@ if(isset($_POST['recipe_name']) && isset($_POST['date']) && !empty($_POST['recip
         <div class="tile is-vertical is-parent is-8" id=marginagendabox>
           <div class="tile is-child box" id=agendabox>
             
+  
 <?php
 
 
- $reponse = $bdd->query('SELECT recipe_name, date, fk_userid FROM recipes');
+ $reponse = $bddbocuse->query('SELECT recipe_name, date, fk_userid FROM recipes');
   
   while ($donnees = $reponse->fetch())
   {
@@ -73,7 +77,9 @@ if(isset($_POST['recipe_name']) && isset($_POST['date']) && !empty($_POST['recip
     </p>
 
     <p class="subtitle">
-<?php echo 'Date: ' . $donnees['date'] . ', 13:30'; ?>
+<?php 
+echo 'Date: ' . $donnees['date'] . ', 13:30'; 
+?>
 </p> 
 <p>
   <?php

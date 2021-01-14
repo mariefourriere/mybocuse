@@ -1,9 +1,24 @@
+<?php
+
+
+try
+{
+	$dbbocuse = new PDO('mysql:host=localhost;dbname=mybocuse;charset=utf8',$phpmalog, $phppasswd);
+}
+catch(Exception $e)
+{
+        die('Erreur : '.$e->getMessage());
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../dashboard.css" rel="stylesheet">
+    <link href="./dashboard.css" rel="stylesheet">
     <title> Dashboard </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
   </head>
@@ -28,16 +43,19 @@
 
       <figure class="calendarbutton" id=calendarbutton>
       <a href='recipe_book_chefs.php'><img src="../asset/icons/calendar.png"></a>
+        <img src="./asset/icons/calendar.png">
      </figure>
 
      
      <!------------------------------LINK-TO-LOGOUT------------------------------------->
 
     <figure class="logoutbutton">
-    <a href='../logout.php'><img src="../asset/icons/logout.png" id=logoutbutton></a>
+
+      <a href='../logout.php'><img src="../asset/icons/logout.png" id=logoutbutton></a>
       </figure>
       </article>
     </div> 
+
   
 
 <!---------------------------------------LEFT-SIDE-OF DASHBOARD---------------------------------------------->
@@ -48,10 +66,21 @@
             <!-- Add content or other tiles -->
         
             <article class="tile is-child box" id=namedashboard>
-              <p class="hichef">Hi Chef Nom!</p>
+<?php
+            $chef_req = $dbbocuse->query('SELECT firstname, lastname FROM users');
+  
+  while ($donnees_chef = $chef_req->fetch())
+  {
+      ?>
+              <p class="hichef">Hi Chef
+<?php echo $donnees_chef['lastname']; 
+}$chef_req->closeCursor();
+?>
+
+!</p>
               <p class="welcometext">It's good to see you again.</p>
               <figure class="profilepicturechef">
-                  <img src="../asset/images/chefdashboard.png">
+                  <img src="./asset/images/chefdashboard.png">
             </figure>
             </article>
           </div>
@@ -191,7 +220,7 @@
                             <p class= "dayoftheweek">Monday </p>
                             <p class= recipe>  Tarte aux fraises </p>
                         </div>
-                        <img src="../asset/images/Yellow.png" class="yellowsticker">  
+                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
                     
                     </li>
                     <li>  
@@ -199,7 +228,7 @@
                             <p class= "dayoftheweek">Monday </p>
                             <p class= recipe>  Tarte aux fraises </p>
                         </div>
-                        <img src="../asset/images/Yellow.png" class="yellowsticker">  
+                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
                     
                     </li> 
                     <li>  
@@ -207,7 +236,7 @@
                             <p class= "dayoftheweek">Monday </p>
                             <p class= recipe>  Tarte aux fraises </p>
                         </div>
-                        <img src="../asset/images/Yellow.png" class="yellowsticker">  
+                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
                     
                     </li>
                     <li>  
@@ -215,7 +244,7 @@
                             <p class= "dayoftheweek">Monday </p>
                             <p class= recipe>  Tarte aux fraises </p>
                         </div>
-                        <img src="../asset/images/Yellow.png" class="yellowsticker">  
+                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
                     
                     </li>
                     <li>  
@@ -223,7 +252,7 @@
                             <p class= "dayoftheweek">Monday </p>
                             <p class= recipe>  Tarte aux fraises </p>
                         </div>
-                        <img src="../asset/images/Yellow.png" class="yellowsticker">  
+                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
                     
                     <button class="button is-black" id=agendabutton>the recettes' agenda</button>
                     
@@ -265,12 +294,9 @@
 
 
 <?php 
-    include("../footer.php");
+    include("./footer.php");
     ?>
 
 
   </body>
 </html>
-
-
-

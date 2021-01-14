@@ -65,17 +65,11 @@
 
 /*Richard login end*/
 
-/*Dena dashboard pages*/
-
-
-/*Dena dashboard pages*/
-
-
 
 /*Marie Recipe book page */
 body{
-    width: 100vw;
-    margin: 0;
+    width: 70vw;
+    margin:0;
     
 }
 button {
@@ -124,7 +118,7 @@ h3 {
     background-color: #F5F5F7;
 }
 
-.title{
+p.title{
     font-size: 25px;
 }
 .subtitle{
@@ -133,7 +127,10 @@ h3 {
 p{
     font-size: 12px;
 }
-
+.booked_recipe{
+    background-color: #F5F5F7;
+    font-size: 40px;
+}
 
 /*Marie Recipe book page */
 

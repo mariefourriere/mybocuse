@@ -4,7 +4,7 @@ session_start();
 include('../secret.php');
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=Bocuze;charset=utf8', $php_user, $php_passw);
+	$bdd = new PDO('mysql:host=localhost;dbname=mybocuse;charset=utf8', $phpmalog, $phppasswd);
 }
 catch(Exception $e)
 {
