@@ -29,19 +29,19 @@ catch(Exception $e)
 <div class = studentdashboard>
 
 <div class="tile is-ancestor">
-    <div class="tile is-parent is-2" id=paddingmenu >
-      <article class="tile is-child box has-background-black " id=menubar>
-        <p class="title" id=titlemenu> my.</p>
+    <div class="tile is-parent is-2" id="paddingmenu" >
+      <article class="tile is-child box has-background-black " id="menubar">
+        <p class="title" id="titlemenu"> my.</p>
 
     <!------------------------------LINK-TO-HOMEPAGE-------------------------------------->
 
-        <figure class="homebutton" id=hombebutton>
+        <figure class="homebutton" id="hombebutton">
         <a href="chefdashboard.php"><img src="./asset/icons/home.png"></a>
       </figure>
        
      <!------------------------------LINK-TO-RECIPE-AGENDA------------------------------------->
 
-      <figure class="calendarbutton" id=calendarbutton>
+      <figure class="calendarbutton" id="calendarbutton">
       <a href='recipe_book_chefs.php'><img src="./asset/icons/calendar.png"></a>
         
      </figure>
@@ -51,7 +51,7 @@ catch(Exception $e)
 
     <figure class="logoutbutton">
 
-      <a href='logout.php'><img src="./asset/icons/logout.png" id=logoutbutton></a>
+      <a href='logout.php'><img src="./asset/icons/logout.png" id="logoutbutton"></a>
       </figure>
       </article>
     </div> 
@@ -61,11 +61,11 @@ catch(Exception $e)
 <!---------------------------------------LEFT-SIDE-OF DASHBOARD---------------------------------------------->
 
 
-        <div class="tile is-parent is-5 is-vertical" id=leftsidedashboard>
+        <div class="tile is-parent is-5 is-vertical" id="leftsidedashboard">
           <div class="tile">
             <!-- Add content or other tiles -->
         
-            <article class="tile is-child box" id=namedashboard>
+            <article class="tile is-child box" id="namedashboard">
 <?php
             $chef_req = $dbbocuse->prepare('SELECT email, firstname, lastname FROM users WHERE email = ?');
             $chef_req->execute(array($_SESSION['email']));
@@ -88,7 +88,7 @@ catch(Exception $e)
 
           <div class="studentsinfo">
             <nav class="panel">
-              <p class="panel-heading" id=titleattendance>
+              <p class="panel-heading" id="titleattendance">
                 Students' attendance 
               </p>
               
@@ -101,7 +101,7 @@ catch(Exception $e)
                   <i class="fas fa-book" aria-hidden="true"></i>
                 </span>
                 Dwayne Johnson
-                <p class= numberofabsences> 0 absences</p>
+                <p class= "numberofabsences"> 0 absences</p>
                   </a>
 
 
@@ -110,7 +110,7 @@ catch(Exception $e)
                   <i class="fas fa-book" aria-hidden="true"></i>
                 </span>
                 Jason Statham 
-                <p class= numberofabsences> 0 absences</p>
+                <p class= "numberofabsences"> 0 absences</p>
                 
               </a>
 
@@ -119,7 +119,7 @@ catch(Exception $e)
                   <i class="fas fa-book" aria-hidden="true"></i>
                 </span>
                 Vin Diesel
-                <p class= numberofabsences> 0 absences</p>
+                <p class= "numberofabsences"> 0 absences</p>
               </a>
 
               <a class="panel-block">
@@ -127,7 +127,7 @@ catch(Exception $e)
                   <i class="fas fa-book" aria-hidden="true"></i>
                 </span>
                 Paul Walker
-                <p class= numberofabsences> 0 absences</p>
+                <p class= "numberofabsences"> 0 absences</p>
               </a>
 
               <a class="panel-block">
@@ -135,7 +135,7 @@ catch(Exception $e)
                   <i class="fas fa-code-branch" aria-hidden="true"></i>
                 </span>
                 Michelle Rodriguez
-                <p class= numberofabsences> 0 absences</p>
+                <p class= "numberofabsences"> 0 absences</p>
               </a>
 
               <a class="panel-block">
@@ -143,7 +143,7 @@ catch(Exception $e)
                   <i class="fas fa-code-branch" aria-hidden="true"></i>
                 </span>
                 Jordana Brewster
-                <p class= numberofabsences> 0 absences</p>
+                <p class= "numberofabsences"> 0 absences</p>
               </a>
 
               <a class="panel-block">
@@ -151,7 +151,7 @@ catch(Exception $e)
                   <i class="fas fa-code-branch" aria-hidden="true"></i>
                 </span>
                 Luke Evans
-                <p class= numberofabsences> 0 absences</p>
+                <p class= "numberofabsences"> 0 absences</p>
               </a>
 
               <a class="panel-block">
@@ -159,7 +159,7 @@ catch(Exception $e)
                   <i class="fas fa-code-branch" aria-hidden="true"></i>
                 </span>
                 Charlize Theron
-                <p class= numberofabsences> 0 absences</p>
+                <p class= "numberofabsences"> 0 absences</p>
               </a>
 
               <a class="panel-block">
@@ -167,7 +167,7 @@ catch(Exception $e)
                   <i class="fas fa-code-branch" aria-hidden="true"></i>
                 </span>
                 Vanessa Kirby
-                <p class= numberofabsences> 0 absences</p>
+                <p class= "numberofabsences"> 0 absences</p>
               </a>
 
               <a class="panel-block">
@@ -175,7 +175,7 @@ catch(Exception $e)
                   <i class="fas fa-code-branch" aria-hidden="true"></i>
                 </span>
                 John Cena
-                <p class= numberofabsences> 0 absences</p>
+                <p class= "numberofabsences"> 0 absences</p>
 
               </a>
               

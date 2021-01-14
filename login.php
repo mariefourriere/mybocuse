@@ -6,7 +6,7 @@
   
 <div id="titlebox">
 <figure class="mage is-16by9">
-<img src="./asset/images/titre.png">
+<img src="./asset/images/titre.png" id="logomybocuse">
 </figure>
 </div>
 <?php if ($_SESSION) {
@@ -20,7 +20,7 @@
 <div id="imagebox">
 <figure class="image is-1by1">
 
-  <img src="./asset/images/chef.png">
+  <img src="./asset/images/chef.png" id="chefbecose">
 
 </figure>
 </div>
@@ -59,4 +59,3 @@
 </form>
   </div>
 <script src="script.js"></script> 
-
