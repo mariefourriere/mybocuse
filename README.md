@@ -50,7 +50,7 @@ git clone (url)
 We used [Trello](https://trello.com/b/tKILIBwr/mybocus) to keep track of our work process and made mornings and afternoons briefs to stay aligned with the final objectives.
 
 ### Design
-Our website design was made using Figma, click [here](https://www.figma.com/proto/1fpyLQdaZY3oKJFqO4uZoe/Untitled?node-id=11%3A6&scaling=min-zoom) to view the prototype.
+Our website design was made using Figma, click [here](https://www.figma.com/proto/1fpyLQdaZY3oKJFqO4uZoe/my.bocuse?node-id=11%3A6&scaling=scale-down) to view the prototype.
 
 Here is an image of the database architecture.
 ![image](./asset/images/architecture.jpeg)

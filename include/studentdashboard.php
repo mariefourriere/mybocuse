@@ -1,4 +1,15 @@
+<?php
 
+
+try
+{
+	$dbbocuse = new PDO('mysql:host=localhost;dbname=mybocuse;charset=utf8',$phpmalog, $phpmapasswd);
+}
+catch(Exception $e)
+{
+        die('Erreur : '.$e->getMessage());
+}
+?>
 
 <!DOCTYPE html>
 <html>
@@ -26,37 +37,28 @@
         <!------------------------------LINK-TO-HOMEPAGE-------------------------------------->
 
             <figure class="homebutton" id=hombebutton>
-                <img src="./asset/icons/home.png">
+             <a href='studentdashboard.php'><img src="../asset/icons/home.png"></a>
+
           </figure>
-           <script type="text/javascript">
-                     document.getElementById("homebutton").onclick = function () {
-                      location.href = 'studentdashboard.php';
-                        };
-          </script>
+           
          <!------------------------------LINK-TO-RECIPE-AGENDA------------------------------------->
 
           <figure class="calendarbutton" id=calendarbutton>
-            <img src="./asset/icons/calendar.png">
+          <a href='recipe_book.php'><img src="../asset/icons/calendar.png"></a>
+
          </figure>
 
-         <script type="text/javascript">
-                     document.getElementById("calendarbutton").onclick = function () {
-                      location.href = './recipe_book.php';
-                        };
-          </script>
+
          <!------------------------------LINK-TO-LOGOUT------------------------------------->
 
         <figure class="logoutbutton">
-                <img src="./asset/icons/logout.png" id=logoutbutton>
+        <a href='../logout.php'><img src="../asset/icons/logout.png" id=logoutbutton></a>
+
           </figure>
           </article>
         </div>  
 
-        <script type="text/javascript">
-                     document.getElementById("logoutbutton").onclick = function () {
-                      location.href = './logout.php';
-                        };
-          </script>
+
 
 
 <!---------------------------------------LEFT-SIDE-OF DASHBOARD---------------------------------------------->
@@ -64,7 +66,19 @@
 
 <div class="tile is-parent is-5 is-vertical" id=leftsidedashboard>
             <article class="tile is-child box" id=namedashboard>
-              <p class="histudent">Hi Prénom Nom!</p>
+            <?php
+            $student_req = $dbbocuse->prepare('SELECT email, firstname, lastname FROM users WHERE email = ?');
+            $student_req->execute(array($_SESSION['email']));
+  
+  while ($donnees_student = $student_req->fetch())
+  {
+      ?>
+              <p class="hichef">Hi 
+<?php echo $donnees_student['firstname'] . ' ' . $donnees_student['lastname']; 
+}$student_req->closeCursor();
+?>
+
+!</p>
               <p class="welcometext">It's good to see you again.</p>
               <figure class="profilepicturestudent">
                   <img src="./asset/images/student.png">
@@ -156,11 +170,11 @@
                     <button class="button is-black" id=agendabutton>the recettes' agenda</button>
               
                  <!------------------------------LINK-TO-RECIPE-AGENDA------------------------------------->
-                    <script type="text/javascript">
+                    <!--<script type="text/javascript">
                      document.getElementById("agendabutton").onclick = function () {
                       location.href = 'recipe_book.php';
                         };
-                    </script>
+                    </script>-->
                  <!------------------------------LINK-TO-RECIPE-AGENDA------------------------------------->
 
                       </li>
