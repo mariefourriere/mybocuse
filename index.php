@@ -4,7 +4,7 @@ include("secret.php");
 
 try
 {
-	$dbbocuse = new PDO('mysql:host=localhost;dbname=mybocuse;charset=utf8', $phpmalog, $phppasswd);
+	$dbbocuse = new PDO('mysql:host=localhost;dbname=mybocuse;charset=utf8', $phpmalog, $phpmapasswd);
 }
 catch(Exception $e)
 {
@@ -51,11 +51,11 @@ if (isset($_POST['email']) && isset($_POST['password']) && !empty($_POST['email'
 
 if($_SESSION){
   
-if($_SESSION['account_type'] === "student"){
-    include('./include/studentdashboard.php');
-}else{
-    include('./include/chefdashboard.php');
-}
+    if($_SESSION['account_type'] === "student"){
+        include('./include/studentdashboard.php');
+    }else{
+        include('./include/chefdashboard.php');
+    }
    
 
     

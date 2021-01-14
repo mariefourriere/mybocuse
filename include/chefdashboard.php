@@ -3,7 +3,7 @@
 
 try
 {
-	$dbbocuse = new PDO('mysql:host=localhost;dbname=mybocuse;charset=utf8',$phpmalog, $phppasswd);
+	$dbbocuse = new PDO('mysql:host=localhost;dbname=mybocuse;charset=utf8',$phpmalog, $phpmapasswd);
 }
 catch(Exception $e)
 {
@@ -79,7 +79,8 @@ catch(Exception $e)
         
             <article class="tile is-child box" id=namedashboard>
 <?php
-            $chef_req = $dbbocuse->query('SELECT firstname, lastname FROM users');
+            $chef_req = $dbbocuse->prepare('SELECT email, firstname, lastname FROM users WHERE email = ?');
+            $chef_req->execute(array($_SESSION['email']));
   
   while ($donnees_chef = $chef_req->fetch())
   {

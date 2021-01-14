@@ -1,4 +1,15 @@
+<?php
 
+
+try
+{
+	$dbbocuse = new PDO('mysql:host=localhost;dbname=mybocuse;charset=utf8',$phpmalog, $phpmapasswd);
+}
+catch(Exception $e)
+{
+        die('Erreur : '.$e->getMessage());
+}
+?>
 
 <!DOCTYPE html>
 <html>
@@ -64,7 +75,19 @@
 
 <div class="tile is-parent is-5 is-vertical" id=leftsidedashboard>
             <article class="tile is-child box" id=namedashboard>
-              <p class="histudent">Hi Prénom Nom!</p>
+            <?php
+            $student_req = $dbbocuse->prepare('SELECT email, firstname, lastname FROM users WHERE email = ?');
+            $student_req->execute(array($_SESSION['email']));
+  
+  while ($donnees_student = $student_req->fetch())
+  {
+      ?>
+              <p class="hichef">Hi 
+<?php echo $donnees_student['firstname'] . ' ' . $donnees_student['lastname']; 
+}$student_req->closeCursor();
+?>
+
+!</p>
               <p class="welcometext">It's good to see you again.</p>
               <figure class="profilepicturestudent">
                   <img src="./asset/images/student.png">
