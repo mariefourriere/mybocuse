@@ -4,7 +4,7 @@ include("secret.php");
 
 try
 {
-$dbbocuse = new PDO('mysql:host=localhost; dbname=Bocuze', $php_user, $php_passw, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+	$dbbocuse = new PDO('mysql:host=localhost;dbname=mybocuse;charset=utf8', $phpmalog, $phppasswd);
 }
 catch(Exception $e)
 {

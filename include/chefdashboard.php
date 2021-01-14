@@ -1,7 +1,9 @@
 <?php
+
+
 try
 {
-$dbbocuse = new PDO('mysql:host=localhost; dbname=Bocuze', $php_user, $php_passw, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+	$dbbocuse = new PDO('mysql:host=localhost;dbname=mybocuse;charset=utf8',$phpmalog, $phppasswd);
 }
 catch(Exception $e)
 {
@@ -76,7 +78,18 @@ catch(Exception $e)
             <!-- Add content or other tiles -->
         
             <article class="tile is-child box" id=namedashboard>
-              <p class="hichef">Hi Chef Nom!</p>
+<?php
+            $chef_req = $dbbocuse->query('SELECT firstname, lastname FROM users');
+  
+  while ($donnees_chef = $chef_req->fetch())
+  {
+      ?>
+              <p class="hichef">Hi Chef
+<?php echo $donnees_chef['lastname']; 
+}$chef_req->closeCursor();
+?>
+
+!</p>
               <p class="welcometext">It's good to see you again.</p>
               <figure class="profilepicturechef">
                   <img src="./asset/images/chefdashboard.png">
@@ -299,7 +312,3 @@ catch(Exception $e)
 
   </body>
 </html>
-
-
-
-
