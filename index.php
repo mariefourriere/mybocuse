@@ -4,7 +4,7 @@ include("secret.php");
 
 try
 {
-	$dbbocuse = new PDO('mysql:host=localhost;dbname=mybocuse;charset=utf8', $phpmalog, $phpmapasswd);
+	$dbbocuse = new PDO('mysql:host=localhost;dbname=xnnujqmj_mybocuse;charset=utf8', $phpmalog, $phpmapasswd);
 }
 catch(Exception $e)
 {
@@ -40,27 +40,27 @@ if (isset($_POST['email']) && isset($_POST['password']) && !empty($_POST['email'
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 
 </head>
 <body>
-<main class="maincontainer">
+<main class="main--container">
 <?php
 
 if($_SESSION){
   
     if($_SESSION['account_type'] === "student"){
-        include('./include/studentdashboard.php');
+        include('studentdashboard.php');
     }else{
-        include('./include/chefdashboard.php');
+        include('chefdashboard.php');
     }
    
 
     
 }else{
-    include('./include/login.php');
+    include('login.php');
 }
 
 ?>

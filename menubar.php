@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../styles.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
     <title> Dashboard </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
   </head>
@@ -19,20 +19,20 @@
         <!------------------------------LINK-TO-HOMEPAGE-------------------------------------->
 
             <figure class="homebutton" id=hombebutton>
-            <a href='studentdashboard.php'><img src="../asset/icons/home.png"></a>
+            <a href='studentdashboard.php'><img src="./asset/icons/home.png"></a>
           </figure>
            
          <!------------------------------LINK-TO-RECIPE-AGENDA------------------------------------->
 
           <figure class="calendarbutton" id=calendarbutton>
-          <img src="../asset/icons/calendar.png"></a>
+          <img src="./asset/icons/calendar.png"></a>
          </figure>
 
          
          <!------------------------------LINK-TO-LOGOUT------------------------------------->
 
         <figure class="logoutbutton">
-        <a href='../logout.php'><img src="../asset/icons/logout.png" id=logoutbutton></a>
+        <a href='logout.php'><img src="./asset/icons/logout.png" id=logoutbutton></a>
           </figure>
           </article>
         </div> 

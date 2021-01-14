@@ -58,5 +58,5 @@
     <input type="submit" name="submit" id="submit" value="LOGIN" disabled>
 </form>
   </div>
-<script src="./script.js"></script> 
+<script src="script.js"></script> 
 
