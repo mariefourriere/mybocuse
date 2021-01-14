@@ -91,38 +91,19 @@ if(isset($_POST['recipe_name']) && isset($_POST['date']) && !empty($_POST['recip
     
     <br>
     
+    </div>
+
+        </div>
+        
+      </div>
+
+    </section>
+
 
 
 <!------------- Marie modal recipe end ------------->
 
 
-      </div>
-    </div>
-
-  </main>
-
-
-  <script>
-
-let modal = document.getElementById("myModal");
-    let btn = document.getElementById("addRecipe");
-    let span = document.getElementsByClassName("delete")[0];
-
-    btn.onclick = function () {
-      modal.style.display = "block";
-    }
-
-    span.onclick = function () {
-      modal.style.display = "none";
-    }
-
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-
-  </script>
     
   <!------------------------------------------FOOTER------------------------------------------------------>
   <?php 
