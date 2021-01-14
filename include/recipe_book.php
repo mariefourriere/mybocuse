@@ -3,7 +3,7 @@ session_start();
 include('../secret.php');
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=Bocuze;charset=utf8', $php_user, $php_passw);
+	$bddbocuse = new PDO('mysql:host=localhost;dbname=mybocuse;charset=utf8', $phpmalog, $phppasswd);
 }
 catch(Exception $e)
 {
@@ -16,7 +16,7 @@ if(isset($_POST['recipe_name']) && isset($_POST['date']) && !empty($_POST['recip
   $date = $_POST['date'];
   $fk_userid= $_POST['fk_userid'];
   
-  $req = $bdd->prepare('INSERT INTO recipes (recipe_name, date, fk_userid) VALUES(:recipe_name, :date, :fk_userid)');
+  $req = $bddbocuse->prepare('INSERT INTO recipes (recipe_name, date, fk_userid) VALUES(:recipe_name, :date, :fk_userid)');
 
   $req->execute(array(
     'recipe_name' => $recipe_name,
@@ -66,7 +66,7 @@ if(isset($_POST['recipe_name']) && isset($_POST['date']) && !empty($_POST['recip
 <?php
 
 
- $reponse = $bdd->query('SELECT recipe_name, date, fk_userid FROM recipes');
+ $reponse = $bddbocuse->query('SELECT recipe_name, date, fk_userid FROM recipes');
   
   while ($donnees = $reponse->fetch())
   {
