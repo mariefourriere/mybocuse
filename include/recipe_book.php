@@ -4,7 +4,7 @@ include('../secret.php');
 try
 {
 
-  $bdd = new PDO('mysql:host=localhost;dbname=mybocuse;charset=utf8', $phpmalog, $phpmapasswd);
+	$bddbocuse = new PDO('mysql:host=localhost;dbname=mybocuse;charset=utf8', $phpmalog, $phpmapasswd);
 
 }
 catch(Exception $e)
@@ -16,18 +16,16 @@ if(isset($_POST['recipe_name']) && isset($_POST['date']) && !empty($_POST['recip
 {
   $recipe_name = $_POST['recipe_name'];
   $date = $_POST['date'];
-  $fk_userid= $_POST['fk_userid'];
-  
+    
   $req = $bddbocuse->prepare('INSERT INTO recipes (recipe_name, date, fk_userid) VALUES(:recipe_name, :date, :fk_userid)');
 
-  $req->execute(array(
+    $req->execute(array(
     'recipe_name' => $recipe_name,
     'date' => $date,
-    "fk_userid"=>$fk_userid
-    
+    'fk_userid' => $_SESSION['userid']
   ));
 
-  header('Location: ../include/recipe_book.php');
+  // header('Location: ../include/recipe_book.php');
 }
 ?> 
 <!DOCTYPE html>

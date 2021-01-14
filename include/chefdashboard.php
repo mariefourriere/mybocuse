@@ -3,7 +3,7 @@
 
 try
 {
-	$dbbocuse = new PDO('mysql:host=localhost;dbname=mybocuse;charset=utf8',$phpmalog, $phppasswd);
+	$dbbocuse = new PDO('mysql:host=localhost;dbname=mybocuse;charset=utf8',$phpmalog, $phpmapasswd);
 }
 catch(Exception $e)
 {
@@ -67,7 +67,8 @@ catch(Exception $e)
         
             <article class="tile is-child box" id=namedashboard>
 <?php
-            $chef_req = $dbbocuse->query('SELECT firstname, lastname FROM users');
+            $chef_req = $dbbocuse->prepare('SELECT email, firstname, lastname FROM users WHERE email = ?');
+            $chef_req->execute(array($_SESSION['email']));
   
   while ($donnees_chef = $chef_req->fetch())
   {
@@ -215,44 +216,24 @@ catch(Exception $e)
                   <p class="weekrecette">week of 11/01</p>
 
                   <ul>
-                    <li>  
+                  <?php
+            $crecipe_req = $dbbocuse->prepare('SELECT * FROM recipes ORDER BY date DESC LIMIT 5');
+            $crecipe_req->execute(array());
+  
+  while ($donnees_crecipe = $crecipe_req->fetch())
+  {
+      ?>
+              <li>  
                         <div class="recetteoftheday"> 
-                            <p class= "dayoftheweek">Monday </p>
-                            <p class= recipe>  Tarte aux fraises </p>
+                            <p class= "dayoftheweek"><?php echo $donnees_crecipe['date'];?></p>
+                            <p class= "recipe"><?php echo $donnees_crecipe['recipe_name'];?></p>
                         </div>
                         <img src="./asset/images/Yellow.png" class="yellowsticker">  
                     
                     </li>
-                    <li>  
-                        <div class="recetteoftheday"> 
-                            <p class= "dayoftheweek">Monday </p>
-                            <p class= recipe>  Tarte aux fraises </p>
-                        </div>
-                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
-                    
-                    </li> 
-                    <li>  
-                        <div class="recetteoftheday"> 
-                            <p class= "dayoftheweek">Monday </p>
-                            <p class= recipe>  Tarte aux fraises </p>
-                        </div>
-                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
-                    
-                    </li>
-                    <li>  
-                        <div class="recetteoftheday"> 
-                            <p class= "dayoftheweek">Monday </p>
-                            <p class= recipe>  Tarte aux fraises </p>
-                        </div>
-                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
-                    
-                    </li>
-                    <li>  
-                        <div class="recetteoftheday"> 
-                            <p class= "dayoftheweek">Monday </p>
-                            <p class= recipe>  Tarte aux fraises </p>
-                        </div>
-                        <img src="./asset/images/Yellow.png" class="yellowsticker">  
+<?php 
+}$crecipe_req->closeCursor();
+?>
                     
                     <button class="button is-black" id=agendabutton>the recettes' agenda</button>
                     
@@ -267,7 +248,7 @@ catch(Exception $e)
 
 
 
-                    </li>
+                    
                   
                    </ul>
                 </article>
