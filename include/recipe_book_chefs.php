@@ -4,7 +4,7 @@ session_start();
 include('../secret.php');
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=mybocuse;charset=utf8', $phpmalog, $phppasswd);
+	$bdd = new PDO('mysql:host=localhost;dbname=mybocuse;charset=utf8', $phpmalog, $phpmapasswd);
 }
 catch(Exception $e)
 {
@@ -28,7 +28,6 @@ if(isset($_POST['recipe_name']) && isset($_POST['date']) && !empty($_POST['recip
   header('Location: ../include/recipe_book.php');
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,7 +47,7 @@ if(isset($_POST['recipe_name']) && isset($_POST['date']) && !empty($_POST['recip
 <body>
   <!------------- Marie recipe page start------------->
   <header>
-    <h2>Agenda recipe</h2>
+  <h2 id=recipetitleagenda>Agenda recipe</h2>
   </header>
 
   <main>
@@ -92,93 +91,25 @@ if(isset($_POST['recipe_name']) && isset($_POST['date']) && !empty($_POST['recip
     
     <br>
     
-
-
-  
-
-
-          </div>
+    </div>
 
         </div>
-        <div class="tile is-parent is-3 tile_info">
-          <div class="tile is-child box is-grey">
-            <p class="title">The recipe</p>
-            <p>Each day at 1:30PM a learner chooses one of his favorite recipes and shares it with the rest of the class</p>
-            <button class="button is-black" id="addRecipe">Book a recipe</button>
-          </div>
-        </div>
+        
       </div>
 
     </section>
 
 
-    <!------------- Marie modal recipe start------------->
-    <div class="modal" id="myModal">
-      <div class="modal-background"></div>
-      <div class="modal-card ">
-        <header class="has-background-dark modal-card-head">
-          <p class="modal-card-title has-text-white">Book your recipe presentation</p>
-          <button class="delete" aria-label="close"></button>
-        </header>
 
-        <section class="modal-card-body has-background-dark has-text-white">
-          <div class="content">
-            <form method="post" action=''>
-              <label for="title">Recipe Title</label>
-              <input class="input has-background-dark has-text-white" type="text" placeholder="Enter the name of your recipe" name="recipe_name">
-
-              <label for="date">Date</label>
-              <input class="input has-background-dark has-text-white" type="date" name="date">
-
-              <!-- <label for="author">Author</label>
-              <input class="input has-background-dark has-text-white" type="text" name="author" value=""> -->
-                  
-                  <?php 
-                if(isset($_POST['firstname']) && isset($_POST['lastname'])  && !empty($_POST['firstname']) && !empty($_POST['lastname'])){
-                  echo $firstname, $lastname; 
-                }
-                
-                ?> 
-              
-             
-              <button type="submit" name='submit' class="button is-black">Save changes</button>
-            </form>
-
-
-          </div>
-        </section>
 <!------------- Marie modal recipe end ------------->
 
 
-      </div>
-    </div>
-
-  </main>
-
-
-  <script>
-
-let modal = document.getElementById("myModal");
-    let btn = document.getElementById("addRecipe");
-    let span = document.getElementsByClassName("delete")[0];
-
-    btn.onclick = function () {
-      modal.style.display = "block";
-    }
-
-    span.onclick = function () {
-      modal.style.display = "none";
-    }
-
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-
-  </script>
     
-  
+  <!------------------------------------------FOOTER------------------------------------------------------>
+  <?php 
+    include("../footer.php");
+    ?>
+
 
 </body>
 

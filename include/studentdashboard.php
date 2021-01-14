@@ -37,37 +37,28 @@ catch(Exception $e)
         <!------------------------------LINK-TO-HOMEPAGE-------------------------------------->
 
             <figure class="homebutton" id=hombebutton>
-                <img src="./asset/icons/home.png">
+             <a href='studentdashboard.php'><img src="../asset/icons/home.png"></a>
+
           </figure>
-           <script type="text/javascript">
-                     document.getElementById("homebutton").onclick = function () {
-                      location.href = 'studentdashboard.php';
-                        };
-          </script>
+           
          <!------------------------------LINK-TO-RECIPE-AGENDA------------------------------------->
 
           <figure class="calendarbutton" id=calendarbutton>
-            <img src="./asset/icons/calendar.png">
+          <a href='recipe_book.php'><img src="../asset/icons/calendar.png"></a>
+
          </figure>
 
-         <script type="text/javascript">
-                     document.getElementById("calendarbutton").onclick = function () {
-                      location.href = './include/recipe_book.php';
-                        };
-          </script>
+
          <!------------------------------LINK-TO-LOGOUT------------------------------------->
 
         <figure class="logoutbutton">
-                <img src="./asset/icons/logout.png" id=logoutbutton>
+        <a href='../logout.php'><img src="../asset/icons/logout.png" id=logoutbutton></a>
+
           </figure>
           </article>
         </div>  
 
-        <script type="text/javascript">
-                     document.getElementById("logoutbutton").onclick = function () {
-                      location.href = './logout.php';
-                        };
-          </script>
+
 
 
 <!---------------------------------------LEFT-SIDE-OF DASHBOARD---------------------------------------------->
@@ -179,11 +170,11 @@ catch(Exception $e)
                     <button class="button is-black" id=agendabutton>the recettes' agenda</button>
               
                  <!------------------------------LINK-TO-RECIPE-AGENDA------------------------------------->
-                    <script type="text/javascript">
+                    <!--<script type="text/javascript">
                      document.getElementById("agendabutton").onclick = function () {
                       location.href = 'recipe_book.php';
                         };
-                    </script>
+                    </script>-->
                  <!------------------------------LINK-TO-RECIPE-AGENDA------------------------------------->
 
                       </li>
