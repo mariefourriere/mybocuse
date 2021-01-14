@@ -21,38 +21,23 @@
     <!------------------------------LINK-TO-HOMEPAGE-------------------------------------->
 
         <figure class="homebutton" id=hombebutton>
-            <img src="../asset/icons/home.png">
+        <img src="../asset/icons/home.png"></a>
       </figure>
-
-       <script type="text/javascript">
-                 document.getElementById("homebutton").onclick = function () {
-                  location.href = 'chefdashboard.php';
-                    };
-      </script>
+       
      <!------------------------------LINK-TO-RECIPE-AGENDA------------------------------------->
 
       <figure class="calendarbutton" id=calendarbutton>
-        <img src="../asset/icons/calendar.png">
+      <a href='recipe_book_chefs.php'><img src="../asset/icons/calendar.png"></a>
      </figure>
 
-     <script type="text/javascript">
-                 document.getElementById("calendarbutton").onclick = function () {
-                  location.href = 'recipe_book_chefs.php';
-                    };
-      </script>
+     
      <!------------------------------LINK-TO-LOGOUT------------------------------------->
 
     <figure class="logoutbutton">
-            <img src="../asset/icons/logout.png" id=logoutbutton>
+    <a href='../logout.php'><img src="../asset/icons/logout.png" id=logoutbutton></a>
       </figure>
       </article>
-    </div>  
-
-    <script type="text/javascript">
-                 document.getElementById("logoutbutton").onclick = function () {
-                  location.href = '../logout.php';
-                    };
-      </script>
+    </div> 
   
 
 <!---------------------------------------LEFT-SIDE-OF DASHBOARD---------------------------------------------->
