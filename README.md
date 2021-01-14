@@ -52,9 +52,14 @@ We used [Trello](https://trello.com/b/tKILIBwr/mybocus) to keep track of our wor
 ### Design
 Our website design was made using Figma, click [here](https://www.figma.com/proto/1fpyLQdaZY3oKJFqO4uZoe/my.bocuse?node-id=11%3A6&scaling=scale-down) to view the prototype.
 
+Here is an image of the database architecture.
+![image](./asset/images/architecture.jpeg)
+
 
 # Improvements
 We wish to improve:
+
+* a lot :-)
  
 # Contributing
 Pull requests are mandatory. Our team was asked to make commits and pull request often to keep track of everybody's work.
