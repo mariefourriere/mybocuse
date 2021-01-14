@@ -64,7 +64,11 @@ Here is an image of the database architecture.
 # Improvements
 We wish to improve:
 
-* a lot :-)
+* responsiveness
+* home links have problems
+* use of /includes are absent
+* accessibility
+* some features are missing in pages 
  
 # Contributing
 Pull requests are mandatory. Our team was asked to make commits and pull request often to keep track of everybody's work.
