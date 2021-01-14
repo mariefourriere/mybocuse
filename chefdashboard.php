@@ -3,7 +3,7 @@
 
 try
 {
-	$dbbocuse = new PDO('mysql:host=localhost;dbname=mybocuse;charset=utf8',$phpmalog, $phpmapasswd);
+	$dbbocuse = new PDO('mysql:host=localhost;dbname=xnnujqmj_mybocuse;charset=utf8',$phpmalog, $phpmapasswd);
 }
 catch(Exception $e)
 {
@@ -18,7 +18,7 @@ catch(Exception $e)
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="./dashboard.css" rel="stylesheet">
+    <link href="dashboard.css" rel="stylesheet">
     <title> Dashboard </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
   </head>
@@ -36,14 +36,14 @@ catch(Exception $e)
     <!------------------------------LINK-TO-HOMEPAGE-------------------------------------->
 
         <figure class="homebutton" id=hombebutton>
-        <img src="../asset/icons/home.png"></a>
+        <a href="chefdashboard.php"><img src="./asset/icons/home.png"></a>
       </figure>
        
      <!------------------------------LINK-TO-RECIPE-AGENDA------------------------------------->
 
       <figure class="calendarbutton" id=calendarbutton>
-      <a href='recipe_book_chefs.php'><img src="../asset/icons/calendar.png"></a>
-        <img src="./asset/icons/calendar.png">
+      <a href='recipe_book_chefs.php'><img src="./asset/icons/calendar.png"></a>
+        
      </figure>
 
      
@@ -51,7 +51,7 @@ catch(Exception $e)
 
     <figure class="logoutbutton">
 
-      <a href='../logout.php'><img src="../asset/icons/logout.png" id=logoutbutton></a>
+      <a href='logout.php'><img src="./asset/icons/logout.png" id=logoutbutton></a>
       </figure>
       </article>
     </div> 
@@ -234,16 +234,13 @@ catch(Exception $e)
 <?php 
 }$crecipe_req->closeCursor();
 ?>
-                    
-                    <button class="button is-black" id=agendabutton>the recettes' agenda</button>
+                   <!------------------------------LINK-TO-RECIPE-AGENDA-------------------------------------> 
+                    <a href='recipe_book_chefs.php'> <button class="button is-black" id=agendabutton>the recettes' agenda</button> 
+                    </a>
                     
                  
-                 <!------------------------------LINK-TO-RECIPE-AGENDA------------------------------------->
-                    <script type="text/javascript">
-                     document.getElementById("agendabutton").onclick = function () {
-                      location.href = 'recipe_book_chefs.php';
-                        };
-                    </script>
+                 
+                   
                  <!------------------------------LINK-TO-RECIPE-AGENDA------------------------------------->
 
 
@@ -275,7 +272,7 @@ catch(Exception $e)
 
 
 <?php 
-    include("./footer.php");
+    include("footer.php");
     ?>
 
 

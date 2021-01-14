@@ -23,6 +23,11 @@ Part of our becode training, we had to create a website. Here is the main instru
 >You have been selected to make a working prototype for the new cooking bootcamp of the Paul Bocuse Academy ("In Bocuse we trust"), a 7-months intensive cooking training with some of the best chefs around the world.
 >One part of the training consists of a daily activity called "The Recette", each day at 1:30PM a learner choses one of his favorite recipe and shares it with the rest of the class.
 
+Find our first attempt to a fullstack website [here](https://www.mariefourriere.go.yj.fr/)
+
+
+
+
 
 # Technologies
 

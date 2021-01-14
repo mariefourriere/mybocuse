@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-include('../secret.php');
+include('secret.php');
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=mybocuse;charset=utf8', $phpmalog, $phpmapasswd);
+	$bdd = new PDO('mysql:host=localhost;dbname=xnnujqmj_mybocuse;charset=utf8',$phpmalog, $phpmapasswd);
 }
 catch(Exception $e)
 {
@@ -25,7 +25,7 @@ if(isset($_POST['recipe_name']) && isset($_POST['date']) && !empty($_POST['recip
     'fk_userid' => $fk_userid
   ));
 
-  header('Location: ../include/recipe_book.php');
+  header('Location: /recipe_book.php');
 }
 ?>
 <!DOCTYPE html>
@@ -36,7 +36,7 @@ if(isset($_POST['recipe_name']) && isset($_POST['date']) && !empty($_POST['recip
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calendar</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-  <link rel="stylesheet" type="text/css" href="../styles.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
   <!-- Baloo Bhai 2 font -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
@@ -53,9 +53,36 @@ if(isset($_POST['recipe_name']) && isset($_POST['date']) && !empty($_POST['recip
   <main>
     <section class="tiles_group">
 
-    <?php 
-    include("../menubar.php");
-    ?>
+    <div class = studentdashboard>
+
+<div class="tile is-ancestor">
+    <div class="tile is-parent is-2" id=paddingmenu >
+      <article class="tile is-child box has-background-black " id=menubar>
+        <p class="title" id=titlemenu> my.</p>
+
+    <!------------------------------LINK-TO-HOMEPAGE-------------------------------------->
+
+        <figure class="homebutton" id=homebutton>
+        <a href="chefdashboard.php"><img src="./asset/icons/home.png"></a>
+      </figure>
+       
+     <!------------------------------LINK-TO-RECIPE-AGENDA------------------------------------->
+
+      <figure class="calendarbutton" id=calendarbutton>
+      <a href='recipe_book_chefs.php'><img src="./asset/icons/calendar.png"></a>
+        
+     </figure>
+
+     
+     <!------------------------------LINK-TO-LOGOUT------------------------------------->
+
+    <figure class="logoutbutton">
+
+      <a href='logout.php'><img src="./asset/icons/logout.png" id=logoutbutton></a>
+      </figure>
+      </article>
+    </div> 
+
 
       <div class="tile is-ancestor">
         <div class="tile is-vertical is-parent is-8">
@@ -107,7 +134,7 @@ if(isset($_POST['recipe_name']) && isset($_POST['date']) && !empty($_POST['recip
     
   <!------------------------------------------FOOTER------------------------------------------------------>
   <?php 
-    include("../footer.php");
+    include("footer.php");
     ?>
 
 
