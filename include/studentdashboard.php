@@ -41,7 +41,7 @@
 
          <script type="text/javascript">
                      document.getElementById("calendarbutton").onclick = function () {
-                      location.href = 'recipe_book.php';
+                      location.href = './recipe_book.php';
                         };
           </script>
          <!------------------------------LINK-TO-LOGOUT------------------------------------->
