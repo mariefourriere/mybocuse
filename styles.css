@@ -19,7 +19,6 @@
     height: 300px;
 }
 .emailbox{
-    padding-top: 20px;
     background-color: rgb(238, 238, 238);
     border-radius: 10px;
     margin-left: 10px;
@@ -27,9 +26,6 @@
     height: 300px;
     align-self: center;
     text-align: -webkit-center;
-    margin-top: 10px;
-    border: 1px solid rgb(238, 238, 238);
-    box-shadow: 0px 1px 2.5px 0px;
 }
 .email{
     width: 300px;
@@ -63,9 +59,54 @@
     background-image: linear-gradient(120deg, rgb(226, 76, 76), rgb(212, 45, 45));
     
 }
-#loginFailed{
-    color: red;
-    font-size: 15px;
-    font-weight: 500;
-    text-shadow: 0 0 floralwhite;
+
+
+.iconbutton{
+
+    font-size: 24px;
+    color: lightgray;
+}
+
+.histudent{
+    font-weight: 900;
+    font-size: 36px;
+}
+
+.allBoxGrey{
+    background-color: rgb(209, 208, 208)!important;
+}
+
+.allBoxBlack{
+    background-color: black!important;
+}
+
+.attendancetitle{
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.rightSide{
+    float: right;
+    margin-right: 50px;
+    border-radius:10px;
+}
+
+.absence{
+    text-align:center;
+}
+
+.absencehours{
+    font-size: 100px;
+    color: black;
+    font-weight: bold;
+}
+
+.reviewabsencebutton{
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+
+.fondBlue{
+    background-color:blue!important;
 }

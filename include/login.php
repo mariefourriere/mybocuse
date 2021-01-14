@@ -32,7 +32,8 @@
   </p>
 </div>
     
-
+ 
+    
 
 <div class="field">
   <p class="control has-icons-left">
@@ -46,10 +47,6 @@
 
     <!-- <button type="submit" name="submit" id="submit" disabled>Valider</button> -->
     <input type="submit" name="submit" id="submit" value="LOGIN" disabled>
-    <?php if($_SESSION['logged'] == false) {
-    echo "<p style='visibility: hidden;' id='loginFailed'>Login failed !</p>";
- 
- } ?> 
 </form>
   </div>
 <script src="script.js"></script> 
