@@ -70,6 +70,10 @@ if($_SESSION){
 ?>
 
 </main>
+
+<?php 
+    include("footer.php");
+    ?>
     
     <script src="script.js"></script>
 
