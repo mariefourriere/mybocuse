@@ -3,7 +3,7 @@
 
 try
 {
-	$dbbocuse = new PDO('mysql:host=localhost;dbname=xnnujqmj_mybocuse;charset=utf8',$phpmalog, $phpmapasswd);
+	$dbbocuse = new PDO('mysql:host=localhost;dbname=mybocuse2$;charset=utf8',$phpmalog, $phpmapasswd);
 }
 catch(Exception $e)
 {
@@ -96,7 +96,7 @@ catch(Exception $e)
 
             <div class="tile is-parent" id="paddingabsences">
                 <article class="tile is-child box" id="absencesdashboard">
-                  <p class="absencehours">0</p>
+                <p id="absencehours" class="absencehours">0</p>
                   <p class="unjustifiedabsences">Unjustified <br> absences</p>
                 </article>
               </div>

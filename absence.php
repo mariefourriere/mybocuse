@@ -2,7 +2,7 @@
 include('secret.php');
 
 try {
-    $conn = new PDO('mysql:host=localhost; dbname=xnnujqmj_mybocuse', 'xnnujqmj_marie','MwDr7PX1z45!~o' , array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    $conn = new PDO('mysql:host=localhost; dbname=mybocuse2$', $phpmalog, $phpmapasswd , array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
  
@@ -36,3 +36,4 @@ try {
     }
 
 ?>
+
