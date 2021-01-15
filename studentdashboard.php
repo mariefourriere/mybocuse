@@ -3,7 +3,7 @@
 
 try
 {
-	$dbbocuse = new PDO('mysql:host=localhost;dbname=mybocuse2$;charset=utf8',$phpmalog, $phpmapasswd);
+	$dbbocuse = new PDO('mysql:host=localhost;dbname=xnnujqmj_mybocuse;charset=utf8',$phpmalog, $phpmapasswd);
 }
 catch(Exception $e)
 {

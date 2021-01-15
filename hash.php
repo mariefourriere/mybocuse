@@ -1,7 +1,7 @@
 <?php
     include('secret.php');
 
-    $dbbeaucuz = new PDO('mysql:host=localhost;dbname=mybocuse2$;charset=utf8',$phpmalog, $phpmapasswd, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    $dbbeaucuz = new PDO('mysql:host=localhost;dbname=xnnujqmj_mybocuse;charset=utf8',$phpmalog, $phpmapasswd, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
     $response = $dbbeaucuz->query('SELECT userid, email, password FROM users');
     while($datas = $response->fetch()){
         $originpw = $datas['password'];

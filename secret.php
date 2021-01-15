@@ -1,4 +1,4 @@
 <?php
-    $phpmalog = 'user';
-    $phpmapasswd = 'P@ssW0rd';
+    $phpmalog = 'xnnujqmj_marie';
+    $phpmapasswd = 'E&00ABx@dlp16U';
 ?>
