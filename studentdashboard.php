@@ -37,7 +37,7 @@ catch(Exception $e)
         <!------------------------------LINK-TO-HOMEPAGE-------------------------------------->
 
             <figure class="homebutton" id="hombebutton">
-             <a href='studentdashboard.php'><img src="./asset/icons/home.png"></a>
+             <a href='index.php'><img src="./asset/icons/home.png"></a>
 
           </figure>
            
@@ -202,9 +202,7 @@ catch(Exception $e)
 
 <!-----------------------------------------------FOOTER-------------------------------------------------------------->
 
-<?php 
-    include("footer.php");
-    ?>
+
 <script>
      const buttonAttendance = document.getElementById('attendancebutton');
      buttonAttendance.addEventListener('click', ()  => {

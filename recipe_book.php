@@ -62,7 +62,7 @@ if(isset($_POST['recipe_name']) && isset($_POST['date']) && !empty($_POST['recip
     <!------------------------------LINK-TO-HOMEPAGE-------------------------------------->
 
         <figure class="homebutton" id=hombebutton>
-         <a href='studentdashboard.php'><img src="./asset/icons/home.png"></a>
+         <a href='index.php'><img src="./asset/icons/home.png"></a>
 
       </figure>
        

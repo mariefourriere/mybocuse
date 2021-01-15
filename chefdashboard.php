@@ -36,7 +36,7 @@ catch(Exception $e)
     <!------------------------------LINK-TO-HOMEPAGE-------------------------------------->
 
         <figure class="homebutton" id="hombebutton">
-        <a href="chefdashboard.php"><img src="./asset/icons/home.png"></a>
+        <a href="index.php"><img src="./asset/icons/home.png"></a>
       </figure>
        
      <!------------------------------LINK-TO-RECIPE-AGENDA------------------------------------->
@@ -271,9 +271,6 @@ catch(Exception $e)
 <!-----------------------------------------------FOOTER-------------------------------------------------------------->
 
 
-<?php 
-    include("footer.php");
-    ?>
 
 
   </body>
