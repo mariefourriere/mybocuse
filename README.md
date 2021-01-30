@@ -25,8 +25,8 @@ Part of our becode training, we had to create a website. Here is the main instru
 
 Find our first attempt to a fullstack website [here](https://www.mariefourriere.go.yj.fr/)
 To access the website.
-Enter as a Student: john-c@beaucuz.be // Johncena
-Enter as a Chef: marie-f@beaucuz.be // mariefourriere
+- Enter as a Student: john-c@beaucuz.be // Johncena
+- Enter as a Chef: marie-f@beaucuz.be // mariefourriere
 
 
 
