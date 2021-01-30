@@ -24,6 +24,8 @@ Part of our becode training, we had to create a website. Here is the main instru
 >One part of the training consists of a daily activity called "The Recette", each day at 1:30PM a learner choses one of his favorite recipe and shares it with the rest of the class.
 
 Find our first attempt to a fullstack website [here](https://www.mariefourriere.go.yj.fr/)
+
+
 To access the website.
 - Enter as a Student: john-c@beaucuz.be // Johncena
 - Enter as a Chef: marie-f@beaucuz.be // mariefourriere
